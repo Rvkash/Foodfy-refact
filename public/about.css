@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0px 12vmax;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding-bottom: 62px;
+    min-height: 100%;
+}
+
+header {
+    padding: 36px 0px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 120px;
+}
+
+header a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px ;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    margin-left: 30px;
+}
+
+.content {
+    padding-bottom: 50px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    font-weight: 400;
+    opacity: 0.7;
+
+    padding: 20px 0px 30px 0px;
+}
+
+.about h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #111111;
+
+}
+
+.start h1 {
+    font-size: 20px;
+    color: #111111;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.recepie h1 {
+    font-size: 20px;
+    color: #111111;
+    line-height: 24px;
+    font-weight: 700;
+}
+.recepie p {
+    padding-bottom: 50px;
+}
+
+footer {
+    background: #EEEEEE;
+
+    height: 62px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+
+    font-weight: 400;
+    line-height: 16px;
+
+    padding: 23px;
+}
+
+header a:hover {
+	color: #7159c1;
+}

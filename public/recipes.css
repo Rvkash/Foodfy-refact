@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+body {
+    padding: 0px 12vmax;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+
+}
+
+
+header img {
+  margin-right: 122.4px;
+}
+
+header a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+
+    color: #111111;
+    text-decoration: none;
+    margin: 18px;
+	}
+	
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	
+		gap: 20px;
+	}
+	
+	.card img {
+		width: 24vw;
+		height: 20vh;
+	
+		border-radius: 15px;
+		margin-bottom: 20px;
+	}
+	
+	
+	
+	.info h1 {
+			font-size: 18px;
+			color: #111111;
+	
+			font-weight: 500;
+			line-height: 21px;
+			margin-bottom: 5px;
+	}
+	
+	.info p {
+		font-size: 14px;
+		color: #777777;
+	
+		font-weight: 400;
+		line-height: 16px;
+	}
+
+	footer {
+		background: #EEEEEE;
+		height: 62px;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	footer p {
+	font-size: 14px;
+	color: #999999;
+	font-weight: 400;
+	line-height: 16px;
+	padding: 23px;
+	}
+
+	header a:hover {
+		color: #7159c1;
+	}
+	
+
+	/* Modal */
+
+	
