@@ -1,0 +1,70 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{recipe.title}}</title>
+    <link rel="stylesheet" href="infoRecipes.css">
+{% endblock head %}
+
+
+{% block links %}   
+    <a href="/about">About</a>
+    <a href="/recipes"><strong>Recipes</strong></a>
+{% endblock links %}
+
+{% block content %}
+    <div class="image_recipe">
+        <img src="{{recipe.image}}" alt="Image of recipe {{recipe.title}}">
+    </div>
+
+    <div class="title_recipe">
+        <h1>{{recipe.title}}</h1>
+        <p>por {{recipe.author}}</p>
+    </div>
+
+    <div class="ingredients_recipe">
+        <div class="intro">
+            <h2>Ingredients</h2>
+            <span class="hide" id="0">ESCONDER</span>
+        </div>
+        <div class="modal0">
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ingredient}}</li>
+                {% endfor %}
+            </ul>
+        </div>   
+    </div>
+
+    <div class="preparation_recipe">
+        <div class="intro">
+            <h2>Preparation</h2>
+            <span class="hide" id="1">ESCONDER</span>
+        </div>
+        <div class="modal1">
+            <ul>
+                {% for steps in recipe.preparation %}
+                    <li>{{steps}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="information_recipe">
+        <div class="intro">
+            <h2>Information</h2>
+            <span class="hide" id="2">ESCONDER</span>
+        </div>
+        <div class="modal2">
+             <p>{{recipe.information}}</p>
+        </div>
+    </div>
+
+
+    <script src="/scripts/infoRecipes.js"></script>
+    
+    {% endblock content %}
+    
+    <footer>
+        <p>Todos os direitos reservados,receitas Foodfy.</p>
+    </footer>
+
