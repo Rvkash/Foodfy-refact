@@ -32,7 +32,7 @@ Foodfy é um website com receitas e ingredientes, feito no bootcamp da rocketsea
 - Nodejs 
 
 ## :memo: Licença
-Lançado em 2020.
+Lançado em 2020</br>
 Esse projeto está sob a licença MIT. Veja o arquivo <a href="LICENSE">[LICENSE](/LICENSE) para mais detalhes.
 
     
