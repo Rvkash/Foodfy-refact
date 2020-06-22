@@ -107,6 +107,13 @@ padding: 50px 0px;
 
   border-radius: 15px;
   margin-bottom: 20px;
+
+
+  cursor: pointer;
+}
+
+.card_img:hover {
+  transform: scale(1.1);
 }
 
 

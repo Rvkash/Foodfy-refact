@@ -2,9 +2,8 @@
 
 {% block head %}
     <title>{{recipe.title}}</title>
-    <link rel="stylesheet" href="infoRecipes.css">
+    
 {% endblock head %}
-
 
 {% block links %}   
     <a href="/about">About</a>
@@ -12,6 +11,7 @@
 {% endblock links %}
 
 {% block content %}
+    <link rel="stylesheet" href="/styles/infoRecipes.css">
     <div class="image_recipe">
         <img src="{{recipe.image}}" alt="Image of recipe {{recipe.title}}">
     </div>
@@ -61,10 +61,4 @@
 
 
     <script src="/scripts/infoRecipes.js"></script>
-    
-    {% endblock content %}
-    
-    <footer>
-        <p>Todos os direitos reservados,receitas Foodfy.</p>
-    </footer>
-
+{% endblock content %}

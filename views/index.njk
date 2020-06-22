@@ -2,6 +2,7 @@
 
 {% block head %}
 <title>Home</title>
+<link rel="stylesheet" href="styles.css">
 {% endblock head %}
 
 {% block content %}
@@ -15,7 +16,6 @@
     <a href="/recipes">Receitas</a>
 </header>
 
-<main>
     <div class="corpo">
       <img src="assets/chef.png">
     <div class="corpo-text">
@@ -26,84 +26,28 @@
       </div>
     </div>
 
-    
-  </main>
 
 <section class="recipes">
 
     <h1>Mais acessadas</h1>
     <div class="cards">
-        <div class="card">
-            <div class="card_img">
-                <img src="/assets/burger.png" alt="Triple bacon burger">
+        {% for item in items %}
+            <div class="card" name="{{recipe.title}}">
+                <div class="card_img">
+                    <img src="{{item.image}}" alt="Triple bacon burger">
+                </div>
+                <div class="info">
+                    <h1>{{item.title}}</h1>
+                    <p>{{item.author}}</p>
+                </div>
             </div>
-            <div class="info">
-                <h1>Triple bacon burger</h1>
-                <p>por Jorge Relato</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card_img">
-                <img src="/assets/pizza.png" alt="Pizza 4 estações">
-            </div>
-            <div class="info">
-                <h1>Pizza 4 estações</h1>
-                <p>por Fabiana Melo</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card_img">
-                <img src="/assets/espaguete.png" alt="Espaguete ao alho">
-            </div>
-            <div class="info">
-                <h1>Espaguete ao alho</h1>
-                <p>por Júlia Kinoto</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card_img">
-                <img src="/assets/lasanha.png" alt="Lasanha mac n’ cheese">
-            </div>
-            <div class="info">
-                <h1>Lasanha mac n’ cheese</h1>
-                <p>por Juliano Vieira</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card_img">
-                <img src="/assets/doce.png" alt="Docinhos pão-do-céu">
-            </div>
-            <div class="info">
-                <h1>Docinhos pão-do-céu</h1>
-                <p>por Ricardo Golvea</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card_img">
-                <img src="/assets/asinhas.png" alt="Asinhas de frango ao barbecue">
-            </div>
-            <div class="info">
-                <h1>Asinhas de frango ao barbecue</h1>
-                <p>por Vania Steroski</p>
-            </div>
-        </div>
-      </div>
+        {% endfor %}
    </section>
 
- 
-  
-  </header>
 
-  
   <footer>
     <p>Todos os direitos reservados, receitas Foodfy.</p>
   </footer>
-</body>
-</html>
 
+    <script src="/scripts/recipes.js"></script>
 {% endblock content %}
