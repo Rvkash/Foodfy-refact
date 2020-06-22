@@ -1,0 +1,117 @@
+body {
+	padding: 0px 12vmax;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 62px;
+	min-height: 100%;
+}
+
+header {
+	padding: 36px 0px;
+	display: flex;
+	align-items: center;
+}
+
+.image_recipe img {
+	border-radius: 15px;
+
+	height: 38vh;
+	width: 74.5vw;
+}
+
+.ingredients_recipe {
+	padding-bottom: 40px;
+}
+
+
+.preparation_recipe {
+	padding-bottom: 40px;
+}
+
+.information_recipe {
+	padding-bottom: 50px;
+}
+
+
+.title_recipe {
+	text-align: center;
+	padding: 50px 0;
+}
+
+.title_recipe h1 {
+	font-size: 36px;
+	font-weight: 700;
+	color: #111111;
+
+	line-height: 42px;
+}
+
+.title_recipe p {
+	font-size: 20px;
+	font-weight: 400;
+	color: #777777;
+
+	line-height: 24px;
+}
+
+.intro{
+	display: flex;
+	align-items: baseline;
+}
+
+.intro span {
+	font-size: 12px;
+	color: #999999;
+	line-height: 14px;
+	font-weight: 700;
+	margin-left: 8px;
+
+	cursor: pointer;
+}
+
+
+ul {
+	padding: 20px 0;
+	list-style-position: inside;
+}
+
+li {
+	font-size: 18px;
+	color: #444444;
+	line-height: 28px;
+}
+
+
+.modal2 p {
+	padding: 20px 0px;
+	font-size: 18px;
+	color: #444444;
+	line-height: 28px;
+	white-space: pre-line;
+}
+
+.active {
+	display: none;
+}
+
+
+
+footer {
+	background: #EEEEEE;
+
+	height: 62px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+
+	text-align: center;
+}
+
+footer p {
+	font-size: 14px;
+	color: #999999;
+
+	font-weight: 400;
+	line-height: 16px;
+
+	padding: 23px;
+}
