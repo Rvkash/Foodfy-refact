@@ -18,6 +18,9 @@
 ## :pizza: O que é Foodfy
 Foodfy é um website com receitas e ingredientes, feito no bootcamp da rocketseat
 
+<h1 align="center">
+    <img src="imggif/foodfy.gif">
+</h1>
 
 
 
