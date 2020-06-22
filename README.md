@@ -4,7 +4,7 @@
 
 
 
-<blockquote align="center">“Se você continuar fazendo sempre as mesmas coisas, terá sempre o mesmo resultado”</blockquote>
+<blockquote align="center">“Alguem disse pizza?!”</blockquote>
 
 
 <h1 align="center">  Foodfy </h1>
