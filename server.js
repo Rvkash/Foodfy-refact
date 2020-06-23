@@ -40,7 +40,7 @@ server.get('/recipes/:index', function (req, res) {
     return res.send('Recipe not found!')
   }
 
-  return res.render('infoRecipe', { recipe: recipesData[index] })
+  return res.render('infoRecipes', { recipe: recipesData[index] })
 })
 
 server.listen(5000, function () {

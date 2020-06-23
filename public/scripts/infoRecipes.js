@@ -1,4 +1,4 @@
-const span = document.querySelectorAll('.hide')
+const span = document.querySelectorAll('.esconder')
 
 for (const spa of span) {
   spa.addEventListener('click', function () {
