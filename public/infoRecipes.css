@@ -60,11 +60,12 @@ header {
 
 .intro span {
 	font-size: 12px;
-	color: #999999;
+	color: #ffffff;
 	line-height: 14px;
 	font-weight: 700;
 	margin-left: 8px;
-
+	background-color: rgb(119, 117, 122);
+	padding: 3px;
 	cursor: pointer;
 }
 
@@ -91,6 +92,7 @@ li {
 
 .active {
 	display: none;
+	
 }
 
 
@@ -115,3 +117,29 @@ footer p {
 
 	padding: 23px;
 }
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+
+}
+
+header img {
+  margin-right: 122.4px;
+}
+
+header a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+
+    color: #111111;
+    text-decoration: none;
+    margin: 18px;
+	}
+	
+	header a:hover {
+		color: #7159c1;
+		transform: scale(1.1);
+	}

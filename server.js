@@ -43,6 +43,6 @@ server.get('/recipes/:index', function (req, res) {
   return res.render('infoRecipe', { recipe: recipesData[index] })
 })
 
-server.listen(5006, function () {
+server.listen(5000, function () {
   console.log('Server online')
 })

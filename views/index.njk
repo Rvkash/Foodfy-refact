@@ -6,8 +6,6 @@
 {% endblock head %}
 
 {% block content %}
-
-
 <header>
     <a href="/">
         <img src="/assets/logo.png" alt="Logo Foodfy" />
@@ -28,13 +26,12 @@
 
 
 <section class="recipes">
-
     <h1>Mais acessadas</h1>
     <div class="cards">
         {% for item in items %}
             <div class="card" name="{{recipe.title}}">
                 <div class="card_img">
-                    <img src="{{item.image}}" alt="Triple bacon burger">
+                    <img src="{{item.image}}" alt="{{item.title}}">
                 </div>
                 <div class="info">
                     <h1>{{item.title}}</h1>

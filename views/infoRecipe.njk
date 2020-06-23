@@ -2,16 +2,19 @@
 
 {% block head %}
     <title>{{recipe.title}}</title>
-    
+    <link rel="stylesheet" href="/infoRecipes.css"><header>
+    <a href="/">
+        <img src="/assets/logo.png" alt="Logo Foodfy" />
+      </a>
+    <a href="/about">Sobre</a>
+    <a href="/recipes">Receitas</a>
+	</header>
 {% endblock head %}
 
 {% block links %}   
-    <a href="/about">About</a>
-    <a href="/recipes"><strong>Recipes</strong></a>
 {% endblock links %}
 
 {% block content %}
-    <link rel="stylesheet" href="/styles/infoRecipes.css">
     <div class="image_recipe">
         <img src="{{recipe.image}}" alt="Image of recipe {{recipe.title}}">
     </div>
@@ -59,6 +62,9 @@
         </div>
     </div>
 
-
-    <script src="/scripts/infoRecipes.js"></script>
+     <script src="/scripts/infoRecipes.js"></script>
+     
 {% endblock content %}
+
+   
+
