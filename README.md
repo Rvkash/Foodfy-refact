@@ -4,7 +4,7 @@
 
 
 
-<blockquote align="center">“Alguem disse pizza?!”</blockquote>
+<blockquote align="center">“Alguém disse pizza?!”</blockquote>
 
 
 <h1 align="center">  Foodfy </h1>
