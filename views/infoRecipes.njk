@@ -4,10 +4,20 @@
 {%block title %}
     <title>Foodfy</title>
     
+    
 {%endblock%}
 
     {% block content%}
-    <link rel="stylesheet" href="/infoRecipes.css">
+        <header>
+                <link rel="stylesheet" href="/infoRecipes.css">
+
+                <a href="/">
+                <img src="/assets/logo.png" alt="Logo Foodfy" />
+                </a>
+                <a href="/about">Sobre</a>
+                <a href="/recipes">Receitas</a>
+        </header>
+
     <main>
         <section class="recipe">
             <div id="img">
@@ -42,6 +52,10 @@
             </div>
         </section>
     </main>
+
+    
+
+
 
     <script src="/scripts/infoRecipes.js"></script>
     {%endblock%}

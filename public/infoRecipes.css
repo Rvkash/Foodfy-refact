@@ -8,6 +8,31 @@ body{
 header{
 	margin: 20px 170px 0;
 }
+
+header a {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 15px;
+
+	color: #111111;
+	text-decoration: none;
+	margin: 18px;
+}
+
+header a:hover {
+  color: #7159c1;
+  transform: scale(1.1);
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+
+}
+
 header strong{
 	font-weight: bold;
 }
@@ -22,6 +47,8 @@ header img{
 	width: 90px;
 	height: 30px;
 	margin-right: 150px;
+
+
 }
 .about{
 	width: 940px;

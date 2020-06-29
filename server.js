@@ -14,7 +14,9 @@ nunjucks.configure('views', {
 })
 
 server.get('/', function (req, res) {
-  return res.render('index', { items: recipesData })
+  return res.render('index', {
+    items: recipesData
+  })
 })
 
 server.get('/about', function (req, res) {
@@ -22,7 +24,9 @@ server.get('/about', function (req, res) {
 })
 
 server.get('/recipes', function (req, res) {
-  return res.render('recipes', { items: recipesData })
+  return res.render('recipes', {
+    items: recipesData
+  })
 })
 
 // params
@@ -40,7 +44,9 @@ server.get('/recipes/:index', function (req, res) {
     return res.send('Recipe not found!')
   }
 
-  return res.render('infoRecipes', { recipe: recipesData[index] })
+  return res.render('infoRecipes', {
+    recipe: recipesData[index]
+  })
 })
 
 server.listen(5000, function () {

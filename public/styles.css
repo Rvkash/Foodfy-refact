@@ -37,6 +37,7 @@ header a {
 
 .corpo {
   width: 100%;
+  height: 20vw;
   display: flex;
   justify-content: space-between;
   border-radius: 30px;
@@ -45,26 +46,25 @@ header a {
 }
 
 .corpo img {
-  width: 216px;
-  height: 300px;
-  top: 20px;
+  width: 30vh;
+  height: 20vw;
+  top: 118px;
   display: flex;
   position: absolute;
   bottom: 0;
-  right: 100px;
+  right: 230px;
 }
 
 .corpo-text {
   display: flex;
   flex-direction: column;
-
-  padding: 4vmax;
+  padding: 6vmax;
 }
 
 .corpo-text h1 {
   font-family: Roboto;
   font-size: 32px;
-  color: #111111;
+  color: #292727;
  
 }
 

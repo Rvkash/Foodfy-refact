@@ -27,7 +27,7 @@ header img {
 header a {
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px ;
+    line-height: 19px;
 
     color: #111111;
 
@@ -72,6 +72,7 @@ header a {
     line-height: 24px;
     font-weight: 700;
 }
+
 .recepie p {
     padding-bottom: 50px;
 }

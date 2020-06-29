@@ -8,6 +8,7 @@ for (const card of cards) {
       if (title === card.getAttribute('name')) {
         window.location.href = `/recipes/${valor}`
       }
+
       valor++
     }
   })
