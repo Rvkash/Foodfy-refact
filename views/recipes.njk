@@ -5,15 +5,12 @@
 <link rel="stylesheet" href="recipes.css">
 {% endblock head%}
 
-
 {% block content %}
-<header>
-	<a href="/">
-		<img src="/assets/logo.png" alt="Logo Foodfy" />
-	</a>
-	<a href="/about">Sobre</a>
-	<a href="/recipes">Receitas</a>
-</header>
+<section class="black">
+	<header>
+			<img src="/assets/logo.png" alt="Logo Foodfy" />
+ </header>
+</section>
 
 <section class="cards">
 	{% for item in items %}
