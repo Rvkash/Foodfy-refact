@@ -18,9 +18,7 @@ routes.get('/recipes', function (req, res) {
   })
 })
 
-// params
-
-routes.get('/recipes/:index', function (req, res) {
+routes.get('/recipes/:index', function (req, res) { // params
   const index = req.params.index
 
   const recipe = recipesData.find(function (recipe) {
