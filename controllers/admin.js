@@ -100,7 +100,6 @@ exports.put = function (req, res) {
 
 exports.delete = function (req, res) {
 	const { id } = req.body
-
 	const filteredRecipes = data.recipes.filter(function(recipe) {
 		return recipe.id != id
 		
