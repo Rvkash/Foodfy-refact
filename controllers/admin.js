@@ -105,7 +105,6 @@ exports.delete = function (req, res) {
 		return recipe.id != id
 		
 	})
-
 	data.recipes = filteredRecipes
 
 	fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
