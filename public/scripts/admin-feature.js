@@ -15,7 +15,7 @@ function addIngredient () {
 
 const ingredients = document.querySelector('.add-ingredient')
 
-if (ingredients) { ingredients.addEventListener('click', addIngredient)}
+if (ingredients) { ingredients.addEventListener('click', addIngredient) }
 
 // Novo passo de preparo ===
 function addAction () {
@@ -34,4 +34,4 @@ function addAction () {
 
 const action = document.querySelector('.add-action')
 
-if (action) { action.addEventListener('click', addAction)}
+if (action) { action.addEventListener('click', addAction) }
