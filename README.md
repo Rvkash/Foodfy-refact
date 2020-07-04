@@ -23,7 +23,7 @@ Foodfy é um website com receitas e ingredientes, desenvolvido no bootcamp da Ro
 </h1>
 
 <h1 align="center">
-    <img src="ezgif.com-video-to-gif(2).gif">
+    <img src="imggif/ezgif.com-video-to-gif(2).gif">
 </h1>
 
 
