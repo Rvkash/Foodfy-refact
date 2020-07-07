@@ -2,7 +2,7 @@
   "recipes": [
     {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
-      "name": "Triplo bacon burger com chedar",
+      "name": "Triplo bacon burger com chedar 2",
       "author": "Jorge Renato",
       "ingredients": [
         "3 kg de carne moída (escolha uma carne magra e macia)",
@@ -11,6 +11,7 @@
         "3 colheres (sopa) de farinha de trigo",
         "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
         "30 ml de água gelada",
+        "",
         ""
       ],
       "actions": [
@@ -19,6 +20,7 @@
         "Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base.",
         "Faça no máximo 4 camadas por forma e leve para congelar.",
         "Retire do congelador, frite ou asse e está pronto.",
+        "",
         ""
       ],
       "information": "",
