@@ -34,6 +34,7 @@ Foodfy é um website com receitas e ingredientes, desenvolvido no bootcamp da Ro
 - Javascript
 - Nunjucks
 - Nodejs 
+- Postgres
 
 ## :memo: Licença
 Lançado em 2020</br>
