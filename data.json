@@ -1,32 +1,6 @@
 {
   "recipes": [
     {
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
-      "name": "Triplo bacon burger com chedar 2",
-      "author": "Jorge Renato",
-      "ingredients": [
-        "3 kg de carne moída (escolha uma carne magra e macia)",
-        "300 g de bacon moído",
-        "1 ovo",
-        "3 colheres (sopa) de farinha de trigo",
-        "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
-        "30 ml de água gelada",
-        "",
-        ""
-      ],
-      "actions": [
-        "Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado.",
-        "Faça porções de 90 g a 100 g.",
-        "Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base.",
-        "Faça no máximo 4 camadas por forma e leve para congelar.",
-        "Retire do congelador, frite ou asse e está pronto.",
-        "",
-        ""
-      ],
-      "information": "",
-      "id": "1"
-    },
-    {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/pizza.png",
       "name": "Pizza 4 estações",
       "author": "Fabiana Melo",
@@ -42,7 +16,8 @@
         "250 g de mussarela ralada grossa",
         "2 tomates fatiados",
         "azeitona picada",
-        "orégano a gosto"
+        "orégano a gosto",
+        "azeite de oliva"
       ],
       "actions": [
         "No liquidificador bata o leite, o ovo, o sal, o açúcar, a margarina, a farinha de trigo e o fermento em pó até que tudo esteja encorporado.",
@@ -50,10 +25,11 @@
         "Retire do forno e despeje o molho de tomate.",
         "Cubra a massa com mussarela ralada, tomate e orégano a gosto.",
         "Leve novamente ao forno até derreter a mussarela.",
-        "Sirva os pedaços"
+        "Sirva os pedaços",
+        ""
       ],
-      "information": "Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!",
-      "id": 2
+      "information": "",
+      "id": "2"
     },
     {
       "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
@@ -141,6 +117,7 @@
       ],
       "information": "Sirva com café!",
       "id": 6
-    }
+    },
+    {}
   ]
 }
