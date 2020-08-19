@@ -29,7 +29,7 @@ Foodfy é um website com receitas e ingredientes, desenvolvido no bootcamp da Ro
 ## ⌨ Como executar o projeto
 ```bash
 # Clonar o repositório
-git clone https://github.com/rvkash/Foodfy-refact
+git clone https://github.com/Rvkash/Foodfy-refact
 # Entrar no diretório
 cd Foodfy-refact
 # Baixar as dependências
