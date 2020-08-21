@@ -23,3 +23,126 @@ body {
 	margin-left: 185.4px;
 
 }
+
+.form-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 620px;
+	margin: 0 auto;
+}
+
+.form-header-edit {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 620px;
+	margin: 0 30vw;
+}
+/*==FORM==*/
+
+.details {
+	width: 40%;
+	margin: 0 auto;
+}
+
+.details .item {
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+input,
+select {
+	margin-top: 10px;
+	padding: 8px;
+	border-radius: 4px;
+	width: 100%;
+	border: solid #bb8f99 2px;
+}
+
+select {
+	width: 600px;
+}
+
+textarea {
+	width: 555px;
+	border-radius: 10px;
+	height: 80px;
+	margin-top: 8px;
+	border: solid #F3CED6 2px;
+	font-family: 'Roboto', sans-serif;
+	resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+	text-align: left;
+	padding: 8px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+#ingredients,
+#preparation {
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+#ingredients p,
+#preparation p {
+	font-size: 14px;
+	font-weight: 700;
+}
+/*==BUTTONS==*/
+
+.save,
+.delete {
+	margin-top: 10px;
+	padding: 8px 16px;
+	background-color: #3bc02f;
+	color: white;
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	transition: 200ms;
+	cursor: pointer;
+}
+
+.delete {
+	background-color: #ad1b1b;
+}
+
+.save:hover {
+	background-color: #3cc72a;
+}
+
+.delete:hover {
+	background-color: #811818;
+}
+
+.add-ingredient,
+.add-preparation {
+	text-align: center;
+	text-decoration: none;
+	padding: 4px 8px;
+	background-color: #3bc02f;
+	color: white;
+	border-radius: 8px;
+	font-size: 12px;
+	margin-left: 3px;
+	margin-top: 4px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+
+.add-ingredient:hover,
+.add-preparation:hover {
+	background-color: #21c429;
+}
+
+
