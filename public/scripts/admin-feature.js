@@ -10,7 +10,7 @@ function addIngredient () {
 
   newField.children[0].value = ''
 
-  ingredients.appendChild(newField)
+  ingredients.appendChild(newField);
 }
 
 const ingredients = document.querySelector('.add-ingredient')

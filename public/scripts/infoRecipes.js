@@ -19,7 +19,7 @@ document
     if (p1.classList.contains('display')) {
       p1.classList.remove('display')
     } else {
-      p1.classList.add('display')
+      p1.classList.add('display');
     }
   })
 
