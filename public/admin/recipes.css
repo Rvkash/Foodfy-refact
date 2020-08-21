@@ -88,6 +88,22 @@ line-height: 16px;
 padding: 22px;
 }
 
+.button-create a {
+	margin-top: 20px;
+	width: 112px;
+	height: 40px;
+	display: flex;
+	text-decoration: none;
+	background-color: rgb(15, 226, 96) ;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 5px;
+	margin-left: 150px;
+	color: white;
+
+}
+
 
 
 
