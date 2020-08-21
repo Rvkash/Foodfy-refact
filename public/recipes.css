@@ -118,7 +118,12 @@ header a {
 	}
 
 	header a:hover {
+<<<<<<< HEAD
 		color: #df972d;
+=======
+		color: #c15959;
+
+>>>>>>> 5f657ae1b3b3dd1f36e37a5cb1e557ba109a3631
 		
 	}
 
