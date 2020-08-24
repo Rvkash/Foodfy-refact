@@ -15,7 +15,6 @@ routes.get('/admin/recipes', recipes.index)
 routes.get('/admin/recipes/create', recipes.create)
 routes.get('/admin/recipes/:id', recipes.show)
 routes.get('/admin/recipes/:id/edit', recipes.edit)
-routes.get('admin/chefs',main.chefs)
 
 
 routes.post('/admin/recipes', recipes.post)
