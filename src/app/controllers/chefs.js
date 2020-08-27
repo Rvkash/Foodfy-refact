@@ -1,4 +1,3 @@
-const Chef = require('../models/Chef')
 const {date} = require('../lib/format')
 const Chef = require('../models/Chefs')
 
