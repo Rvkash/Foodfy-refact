@@ -1,5 +1,4 @@
 const recipesData = require('../../../public/scripts/data')
-const main = require ('../models/Main')
 
 exports.home = function (req, res) {
   return res.render('main/index', {
@@ -16,6 +15,10 @@ exports.recipes = function (req, res) {
     items: recipesData
   })
 },
+
+exports.chefs = function(req, res) {
+  return res.render('main/chefs')
+}
 
 exports.details = function (req, res) { // params
   const index = req.params.index
