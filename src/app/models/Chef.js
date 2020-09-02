@@ -7,7 +7,7 @@ module.exports = {
         FROM chefs
         LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
         GROUP BY chefs.id
-        ORDER BY name ASC`, function(err, results) {
+        ORDER BY name DESC`, function(err, results) {
             if(err) throw `Database error! ${err}`
 
             callback(results.rows)
