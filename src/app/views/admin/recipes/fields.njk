@@ -22,9 +22,9 @@
     <p>Ingredientes</p>
     <div class="ingredient">
         {% for ingredient in recipe.ingredients %}
-        <input type="text[]" name="ingredients[]" value="{{ingredient}}" placeholder="Digite um ingrediente" />
+        <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Digite um ingrediente" />
         {% endfor %}
-        <input type="text[]" name="ingredients[]" placeholder="Digite um ingrediente" />
+        <input type="text" name="ingredients[]" placeholder="Digite um ingrediente" />
     </div>
 </div>
 <button type="button" class="add-ingredient">Adicionar</button>
@@ -41,11 +41,16 @@
 </div>
 
 <div class="item">
-
     <div>Informações adicionais</div>
     <div>
-        <textarea name="information" cools="30" rows="10" placeholder="Digite as informações extras"
-            value="{{recipe.information}}"></textarea>
+        <textarea 
+        name="information" 
+        cools="30" 
+        rows="10" 
+        placeholder="Digite as informações extras"
+        value="{{recipe.information}}"
+        >
+        </textarea>
     </div>
     <script src="/scripts/admin-feature.js"></script>
 </div>

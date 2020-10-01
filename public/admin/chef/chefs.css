@@ -50,18 +50,20 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	margin-top: 20px;
+	margin-left: 40px;
 	padding: 0 13vmax 0;
 	position: relative;
-	gap: 15px;
+	gap: 70px;
 	
 }
 
 .card img {
-	width: 13vw;
-	height: 22vh;
+	width: 14vw;
+	height: 29vh;
 	object-fit: cover;
-	border-radius: 60px;
+	border-radius: 50%;
 	margin-bottom: 20px;
+
 
 }
 
@@ -79,7 +81,7 @@ body {
 }
 
 .info p {
-	font-size: 14px;
+	font-size: 15px;
 	color: #777777;
 	margin-top: 5px;
 	font-weight: 400;
@@ -88,9 +90,10 @@ body {
 
 
 .visualizar a {
+	display: flex;
+	margin-top: 5px;
 	font-size: 12px;
 	text-decoration: none;
-	margin-top: 30px;
 	color: rgb(15, 71, 226);
 }
 

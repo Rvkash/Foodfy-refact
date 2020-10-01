@@ -25,9 +25,9 @@ recipe-image {
 
 .recipe-image img {
 	width: 20vw;
-	height: 30vh;
+	height: 45vh;
 	margin-left: 40vmax;
-	border-radius: 60px;
+	border-radius: 190px;
 	margin-bottom: 20px;
 
 }
