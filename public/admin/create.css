@@ -45,20 +45,13 @@ body {
 
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 .form-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 620px;
 	margin: 0 auto;
-<<<<<<< HEAD
 	
-=======
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 }
 
 .form-header-edit {
@@ -87,11 +80,7 @@ select {
 	padding: 8px;
 	border-radius: 4px;
 	width: 100%;
-<<<<<<< HEAD
 	border: solid #ddd5d5  2px;
-=======
-	border: solid #bb8f99 2px;
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 }
 
 select {
@@ -99,20 +88,12 @@ select {
 }
 
 textarea {
-<<<<<<< HEAD
 	width: 560px;
 	margin-right: 10px;
 	border-radius: 5px;
 	height: 80px;
 	margin-top: 8px;
 	border: solid #ddd5d5 2px;
-=======
-	width: 555px;
-	border-radius: 10px;
-	height: 80px;
-	margin-top: 8px;
-	border: solid #F3CED6 2px;
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 	font-family: 'Roboto', sans-serif;
 	resize: vertical;
 }
@@ -122,11 +103,7 @@ textarea::placeholder {
 	text-align: left;
 	padding: 8px;
 	font-family: 'Roboto', sans-serif;
-<<<<<<< HEAD
 	font-size: 18px;
-=======
-	font-size: 14px;
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 }
 
 #ingredients,
@@ -136,7 +113,6 @@ textarea::placeholder {
 	font-weight: 700;
 }
 
-<<<<<<< HEAD
 .save {
 	width: 100px;
 	height: 30px;
@@ -193,61 +169,3 @@ footer p {
 	background-color: #23e94e;
 }
 
-=======
-#ingredients p,
-#preparation p {
-	font-size: 14px;
-	font-weight: 700;
-}
-/*==BUTTONS==*/
-
-.save,
-.delete {
-	margin-top: 10px;
-	padding: 8px 16px;
-	background-color: #3bc02f;
-	color: white;
-	border-radius: 5px;
-	font-size: 14px;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 1px;
-	transition: 200ms;
-	cursor: pointer;
-}
-
-.delete {
-	background-color: #ad1b1b;
-}
-
-.save:hover {
-	background-color: #3cc72a;
-}
-
-.delete:hover {
-	background-color: #811818;
-}
-
-.add-ingredient,
-.add-preparation {
-	text-align: center;
-	text-decoration: none;
-	padding: 4px 8px;
-	background-color: #3bc02f;
-	color: white;
-	border-radius: 8px;
-	font-size: 12px;
-	margin-left: 3px;
-	margin-top: 4px;
-	margin-bottom: 16px;
-	cursor: pointer;
-}
-
-.add-ingredient:hover,
-.add-preparation:hover {
-	background-color: #21c429;
-}
-
-
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
