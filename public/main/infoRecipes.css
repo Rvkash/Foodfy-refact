@@ -19,12 +19,6 @@ header a {
 	margin: 18px;
 }
 
-header a:hover {
-  color: #7159c1;
-  transform: scale(1.1);
-}
-
-
 header {
   width: 100%;
   display: flex;

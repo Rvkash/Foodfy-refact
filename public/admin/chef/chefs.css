@@ -18,6 +18,26 @@ body {
 	margin: 0px;
 }
 
+.black a {
+	font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+	margin-left: 10px;
+    color: #ffffff;
+    text-decoration: none;
+	margin: 10px;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.black .logo {
+	height: 100px;
+	display: flex;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+}
+
 
 .black .logo img {
 	padding: 28px;
@@ -29,7 +49,7 @@ body {
 .cards {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin-top: 22px;
+	margin-top: 20px;
 	padding: 0 13vmax 0;
 	position: relative;
 	gap: 15px;
@@ -92,7 +112,7 @@ footer p {
 	padding: 22px;
 }
 
-.gerenciar-receitas h1 {
+.gerenciar-chefs h1 {
 	display: flex;
 	grid-template-columns: 1fr 1fr;
 	margin-top: 40px;
@@ -105,7 +125,7 @@ footer p {
 
 .button-create a {
 	margin-top: 30px;
-	width: 112px;
+	width: 120px;
 	height: 40px;
 	display: flex;
 	text-decoration: none;
