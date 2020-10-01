@@ -101,18 +101,13 @@ padding: 50px 0px;
 .card_img img {
   width: 24vw;
   height: 20vh;
-
+  
   border-radius: 15px;
   margin-bottom: 20px;
 
 
   cursor: pointer;
 }
-
-.card_img:hover {
-  transform: scale(1.1);
-}
-
 
 
 .info h1 {
@@ -149,6 +144,15 @@ line-height: 16px;
 padding: 23px;
 
 }
+
+<<<<<<< HEAD:public/main/styles.css
+=======
+header a:hover {
+  color: #df972d;
+}
+
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512:public/main/styles.css
+
 
 
 

@@ -26,6 +26,18 @@ Foodfy é um website com receitas e ingredientes, desenvolvido no bootcamp da Ro
     <img src="imggif/ezgif.com-video-to-gif(2).gif">
 </h1>
 
+## ⌨ Como executar o projeto
+```bash
+# Clonar o repositório
+git clone https://github.com/Rvkash/Foodfy-refact
+# Entrar no diretório
+cd Foodfy-refact
+# Baixar as dependências
+npm install
+# Executar o servidor
+npm start
+```
+Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
 
 
 ## :email: Faq
@@ -37,7 +49,6 @@ Foodfy é um website com receitas e ingredientes, desenvolvido no bootcamp da Ro
 - Postgres
 
 ## :memo: Licença
-Lançado em 2020</br>
 Esse projeto está sob a licença MIT. Veja o arquivo <a href="LICENSE">[LICENSE](/LICENSE) para mais detalhes.
 
     

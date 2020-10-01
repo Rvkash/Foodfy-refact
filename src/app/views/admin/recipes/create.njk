@@ -1,7 +1,11 @@
 {% extends '../layout.njk' %}
 
 {% block title %}
+<<<<<<< HEAD
 <link rel="stylesheet" href="../../admin/create.css">
+=======
+<link rel="stylesheet" href="/admin/create.css">
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 <title> Criar Receitas </title>
 {% endblock title %}
 
@@ -24,17 +28,29 @@
  <form class="card" method="POST" action="/admin/recipes">
         <section class="details">
             <div class="top">
+<<<<<<< HEAD
                 <h2>Criando receita</h2>
                 <button class="save" type="submit">Salvar</button>
+=======
+                <h2>Criando Receita</h2>
+                <button class="save"type="submit">Salvar</button>
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
             </div>
             {%include './fields.njk' %}
         </section>
     </form>
+<<<<<<< HEAD
 
 {% endblock content %}
 
 {% block footer %}
+=======
+
+
+{% endblock content %}
+
+
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 <footer>
 	<p>Todos os direitos reservados, receitas Foodfy.</p>
 </footer>
-{% endblock footer %}

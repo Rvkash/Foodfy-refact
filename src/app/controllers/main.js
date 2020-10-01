@@ -14,6 +14,10 @@ exports.recipes = function (req, res) {
   return res.render('main/recipes', {
     items: recipesData
   })
+},
+
+exports.chefs = function(req, res) {
+  return res.render('main/chefs')
 }
 
 exports.details = function (req, res) { // params

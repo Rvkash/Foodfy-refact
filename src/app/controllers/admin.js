@@ -1,5 +1,9 @@
 const Recipe = require('../models/Recipe')
+<<<<<<< HEAD
 const {date} = require('../../lib/utils')
+=======
+const {date} = require('../lib/format')
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 
 module.exports = {
     index(req, res){

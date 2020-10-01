@@ -16,12 +16,15 @@ routes.get('/', main.home)
 routes.get('/about', main.about)
 routes.get('/recipes', main.recipes)
 routes.get('/recipes/:index', main.details)
+routes.get('/chefs', main.chefs)
+
 
 // Admin
 routes.get('/admin/recipes', recipes.index)
 routes.get('/admin/recipes/create', recipes.create)
 routes.get('/admin/recipes/:id', recipes.show)
 routes.get('/admin/recipes/:id/edit', recipes.edit)
+
 
 routes.post('/admin/recipes', recipes.post)
 routes.put('/admin/recipes', recipes.put)

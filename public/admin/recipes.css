@@ -29,6 +29,7 @@ body {
 .cards {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+<<<<<<< HEAD
 	margin-top: 22px;
 	padding: 0 13vmax 0;
 	position: relative;
@@ -40,10 +41,20 @@ body {
 	width: 24vw;
 	height: 20vh;
 	object-fit: cover;
+=======
+	margin-top: 15px;
+	padding: 0 10vmax 0;
 
-	border-radius: 15px;
+	gap: 10px;
+}
+
+.card img {
+	width: 21vw;
+	height: 22vh;
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
+
+	border-radius: 10px;
 	margin-bottom: 20px;
-
 	cursor: pointer;
 }
 
@@ -52,8 +63,11 @@ body {
 .info h1 {
 	font-size: 18px;
 	color: #111111;
+<<<<<<< HEAD
 	display: grid;
 
+=======
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 
 	font-weight: 500;
 	line-height: 21px;
@@ -69,9 +83,13 @@ body {
 }
 
 .visualizar a {
-	font-size: 12px;
+	font-size: 15px;
 	text-decoration: none;
+<<<<<<< HEAD
 	color: rgb(15, 71, 226);
+=======
+	color: rgb(15, 113, 226);
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 }
 
 footer {
@@ -92,11 +110,40 @@ footer p {
 	padding: 22px;
 }
 
+<<<<<<< HEAD
 .gerenciar-receitas h1 {
 	display: flex;
 	grid-template-columns: 1fr 1fr;
 	margin-top: 40px;
 	padding: 0 13vmax 0;
+=======
+.button-create a {
+	margin-top: 10px;
+	width: 112px;
+	height: 40px;
+	display: flex;
+	text-decoration: none;
+	background-color: rgb(15, 226, 96) ;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 5px;
+	margin-left: 150px;
+	color: white;
+
+} 
+
+.gerenciar-receitas h1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 50px;
+	padding:  0 10vmax 0 ;
+	font-size: 20px;
+
+	gap: 20px;
+
+}
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 
 	align-items: left;
 	justify-content: left;

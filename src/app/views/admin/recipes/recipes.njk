@@ -7,9 +7,11 @@
 {% endblock title %}
 
 {% block links %}
+
 {% endblock links %}
 
 {% block header %}
+<<<<<<< HEAD
 			<div class="black">
 				<div class="logo">
 					<img src="/assets/logo2.png" alt="">
@@ -19,6 +21,16 @@
 				</div>
 			</div>
 			
+=======
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="black">
+	<div class="logo">
+		<img src="/assets/logo2.png" alt="">
+	</div>
+</div>
+
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 {% endblock header %}
 
 {% block content %}
@@ -27,6 +39,7 @@
 	<a href="/admin/recipes/create">Criar Receita</a>
 </div>
 
+<<<<<<< HEAD
 <section class="gerenciar-receitas">
 	<div class="gerenciar">
 		<h1>Gerenciar Receitas</h1>
@@ -50,6 +63,20 @@
       		</div>
 			  
 		</div>
+=======
+<section class="cards">
+	{% for recipe in recipes %}
+	<div class="card" name="{{recipe.name}}" id="{{recipe.id}}">
+		<img src="{{recipe.image}}">
+		<div class="visualizar">
+			<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+		</div>
+		<div class="info">
+			<h1>{{recipe.name}}</h1>
+			<p>{{recipe.author}}</p>
+		</div>
+	</div>
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 	{% endfor %}
 </section>
 
@@ -59,6 +86,10 @@
 <footer>
 	<p>Todos os direitos reservados, receitas Foodfy.</p>
 </footer>
+<<<<<<< HEAD
 
 {% endblock footer %}
 
+=======
+{% endblock footer %}
+>>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
