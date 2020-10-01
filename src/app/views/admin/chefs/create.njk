@@ -1,18 +1,18 @@
 {% extends '../layout.njk' %}
 
 {% block title %}
-<link rel="stylesheet" href="../../admin/create.css">
-<title> Criar Receitas </title>
+<link rel="stylesheet" href="../../admin/chef/create.css">
+<title> Criar Chef </title>
 {% endblock title %}
 
 {% block header %}
-			<div class="black">
-				<a>
-				<div class="logo">
-					<img src="/assets/logo2.png" alt="">
-				</div>
-				</a>
+		<div class="black">
+			<a href="/">
+			<div class="logo">
+				<img src="/assets/logo2.png" alt="imagem logo">
 			</div>
+			</a>
+		</div>
 {% endblock header %}
 
 {% block links %}
@@ -21,20 +21,24 @@
 
 {% block content %}
 
- <form class="card" method="POST" action="/admin/recipes">
+ <form class="card" method="POST" action="/admin/chefs">
         <section class="details">
             <div class="top">
-                <h2>Criando receita</h2>
+                <h2>Criando Chef</h2>
                 <button class="save" type="submit">Salvar</button>
             </div>
-            {%include './fields.njk' %}
+            {%include './fieldsChef.njk' %}
         </section>
     </form>
 
 {% endblock content %}
 
 {% block footer %}
+
 <footer>
+
 	<p>Todos os direitos reservados, receitas Foodfy.</p>
+
 </footer>
+
 {% endblock footer %}

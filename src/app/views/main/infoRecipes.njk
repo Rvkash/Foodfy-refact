@@ -1,61 +1,56 @@
-{%extends '../main/layout.njk' %}
+{% extends '../main/layout.njk' %}
+../../
 
 
 {%block title %}
-    <title>Foodfy</title>
-    
-    
+<title>Foodfy</title>
+
+
 {%endblock%}
 
-    {% block content%}
-        <header>
-                <link rel="stylesheet" href="/infoRecipes.css">
+{% block content%}
+<header>
+    <link rel="stylesheet" href="../../main/infoRecipes.css">
+    <a>
+        <img src="/assets/logo.png" alt="Logo Foodfy" />
+    </a>
+    <a href="/about">Sobre</a>
+    <a href="/recipes">Receitas</a>
+</header>
 
-                <a href="/">
-                <img src="/assets/logo.png" alt="Logo Foodfy" />
-                </a>
-                <a href="/about">Sobre</a>
-                <a href="/recipes">Receitas</a>
-        </header>
+<main>
+    <section class="recipe">
+        <div id="img">
+            <img src="{{recipe.image}}" alt="{{recipe.id}}">
+            <h3>{{item.title}}</h3>
+            <p>{{item.author}}</p>
+        </div>
 
-    <main>
-        <section class="recipe">
-            <div id="img">
-                <img src="{{recipe.image}}" alt="">
-                <h3>{{item.title}}</h3>
-                <p>{{item.author}}</p>
+        <div id="ingredientes">
+            <div class="subtitle">
+                <h1>Ingredientes</h1> <button class="esconder">Esconder</button>
             </div>
-            
-            <div id="ingredientes">
-                <div class="subtitle">
-                    <h1>Ingredientes</h1>   <button class="esconder">Esconder</button>
-                </div>
-                <ul class='hide-ingredientes '>
-                
-                {%for ingredient in recipe.ingredients%} 
-                <li>{{ingredient}}</li> 
+            <ul class='hide-ingredientes '>
+                {%for ingredient in recipe.ingredients%}
+                <li>{{ingredient}}</li>
 
-                {%endfor%} 
-                </ul>
+                {%endfor%}
+            </ul>
+        </div>
+        <div id="prepare">
+            <div class="subtitle">
+                <h1>Modo de preparo</h1> <button class="mostrar">Mostrar</button>
             </div>
-            <div id="prepare">
-                <div class="subtitle">
-                    <h1>Modo de preparo</h1> <button class="mostrar">Mostrar</button>
-                </div>           
-                <p class='hide-prepare display'>{{recipe.preparation}}</p>
+            <p class='hide-prepare display'>{{recipe.preparation}}</p>
+        </div>
+        <div id="information">
+            <div class="subtitle">
+                <h1>Informações adicionais</h1> <button class="esconder-information">Esconder</button>
             </div>
-            <div id="information">
-                <div class="subtitle">
-                    <h1>Informações adicionais</h1>   <button class="esconder-information">Esconder</button>
-                </div>
-                <p class='hide-information '>{{recipe.information}}</p>
-            </div>
-        </section>
-    </main>
+            <p class='hide-information '>{{recipe.information}}</p>
+        </div>
+    </section>
+</main>
 
-    
-
-
-
-    <script src="/scripts/infoRecipes.js"></script>
-    {%endblock%}
+<script src="../public/scripts/admin-feature.js"></script>
+{%endblock%}

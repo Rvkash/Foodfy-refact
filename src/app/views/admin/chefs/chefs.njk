@@ -2,8 +2,8 @@
 
 {% block title %}
 <link rel="stylesheet" href="create.css">
-<link rel="stylesheet" href="../../admin/recipes.css">
-<title> Gerenciar Receitas </title>
+<link rel="stylesheet" href="../../admin/chef/chefs.css">
+<title> Gerenciar Chefs </title>
 {% endblock title %}
 
 {% block links %}
@@ -18,35 +18,33 @@
 
 				</div>
 			</div>
-			
 {% endblock header %}
 
 {% block content %}
 
 <div class="button-create">
-	<a href="/admin/recipes/create">Criar Receita</a>
+	<a href="/admin/chefs/create">Criar Chef</a>
 </div>
 
-<section class="gerenciar-receitas">
+<section class="gerenciar-chefs">
 	<div class="gerenciar">
-		<h1>Gerenciar Receitas</h1>
+		<h1>Chefs disponíveis</h1>
 	</div>
 </section>
 
 <section class="cards">
-	{% for recipe in recipes %}
-		<div class="card" id="{{recipe.id}}">
-			<img src="{{recipe.image}}" alt="{{recipe.id}}">
+	{% for chef in chefs %}
+		<div class="card" id="{{chef.id}}">
+			<img src="{{chef.avatar_url}}" alt="{{chef.id}}">
 		<div class="info-left">
 			<div class="info">
-				<h1>{{recipe.title}}</h1>
-				<p>{{recipe.author}}</p>
-				
+				<h1>{{chef.name}}</h1>
+
 			</div>
 		</div>
 
 			<div class="visualizar">
-				<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+				<a href="/admin/chefs/{{chef.id}}">Visualizar</a>
       		</div>
 			  
 		</div>

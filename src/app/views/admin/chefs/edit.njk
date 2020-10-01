@@ -3,7 +3,7 @@
 {%block title%}
   <link rel="stylesheet" href="/admin/edit.css">
   <title>
-    Editar Receita
+    Editar Chef
   </title>
   <a href="/admin/recipes">
   	<div class="black">
@@ -26,15 +26,15 @@
         <button type='submit' form='form-edit' class='save'>Salvar</button>
       </div>
     </div>
-    <form id='form-edit' method='POST' action='/admin/recipes/?_method=PUT'>
+    <form id='form-edit' method='POST' action='/admin/chefs/?_method=PUT'>
       <section class="details">
        {%include './fields.njk' %}
 
-        <input type="hidden" name='id' value="{{recipe.id}}">
+        <input type="hidden" name='id' value="{{chef.id}}">
       </form>
     </section>
-    <form id='form-delete' action="/admin/recipes?_method=DELETE" method="POST">
-      <input type="hidden" name="id" value='{{recipe.id}}'>
+    <form id='form-delete' action="/admin/chefs?_method=DELETE" method="POST">
+      <input type="hidden" name="id" value='{{chef.id}}'>
         {%include '../../confirm.njk'%}
     </form>
 

@@ -13,29 +13,32 @@
     <div><input type="text" name="author" placeholder="Digite seu nome" value="{{recipe.author}}"></div>
 </div>
 
-<div id="ingredients">
+<div class="item"id="ingredients">
     <p>Ingredientes</p>
     <div class="ingredient">
         {%for ingredient in recipe.ingredients%}
-        <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Digite um ingrediente"/>
-        {%endfor%}
-        <input type="text" name="ingredients[]"  placeholder="Digite um ingrediente"/>
+            <input type="text" name="ingredients" value="{{ingredient}}" placeholder="Digite um ingrediente"/>
+        {% endfor %}
+          <input type="text" name="ingredients[]"  placeholder="Digite um ingrediente"/>
     </div>
 </div>
-    <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+    <button type="button" class="add-ingredient[]">Adicionar</button>
+
     
-    <div id="actions">
-        <p>Modo de preparo</p>
+<div class="item" id="actions">
+    <p>Modo de preparo</p>
         <div class="action">
-            {%for action in recipe.actions%}
-            <input type="text" name="actions[]" value="{{action}}" placeholder="Digite uma ação"/>
+            {%for action in recipe.preparation%}
+            <input type="text" name="preparation[]" value="{{preparation}}" placeholder="Digite uma ação"/>
             {%endfor%}
-            <input type="text" name="actions[]"  placeholder="Digite uma ação"/>
+            <input type="text" name="preparation[]"  placeholder="Digite uma ação"/>
         </div>
     </div>
-        <div class="item">
-            <div>Informações adicionais</div>
-            <div>
-                <textarea name="information" cols="30" rows="10" placeholder="Digite as informações extras" value="{{recipe.information}}"></textarea>
-            </div>
+
+<div class="item">
+        <div>Informações adicionais</div>
+        <div>
+             <textarea name="information"  placeholder="Digite as informações extras" value="{{recipe.information}}"></textarea>
         </div>
+        <script src="/scripts/admin-feature.js"></script>
+    </div>
