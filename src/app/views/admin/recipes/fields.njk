@@ -1,44 +1,51 @@
 <div class="item">
     <div>Imagem da Receita</div>
-    <div><input type="url" name="image" placeholder="https://" value="{{recipe.image}}"></div>
+    <div><input type="url" name="image" placeholder="https://" value="{{recipe.image}}">
+    </div>
 </div>
 
 <div class="item">
     <div>Nome da receita</div>
-    <div><input type="text" name="name" placeholder="Digite o nome da receita" value="{{recipe.name}}"></div>
+    <div>
+        <input type="text" name="name" placeholder="Digite o nome da receita" value="{{recipe.title}}">
+    </div>
 </div>
 
 <div class="item">
     <div>Autor da receita</div>
-    <div><input type="text" name="author" placeholder="Digite seu nome" value="{{recipe.author}}"></div>
+    <div>
+        <input type="text" name="author" placeholder="Digite seu nome" value="{{recipe.author}}">
+    </div>
 </div>
 
-<div class="item"id="ingredients">
+<div class="item" id="ingredients">
     <p>Ingredientes</p>
     <div class="ingredient">
-        {%for ingredient in recipe.ingredients%}
-            <input type="text" name="ingredients" value="{{ingredient}}" placeholder="Digite um ingrediente"/>
+        {% for ingredient in recipe.ingredients %}
+        <input type="text[]" name="ingredients[]" value="{{ingredient}}" placeholder="Digite um ingrediente" />
         {% endfor %}
-          <input type="text" name="ingredients[]"  placeholder="Digite um ingrediente"/>
+        <input type="text[]" name="ingredients[]" placeholder="Digite um ingrediente" />
     </div>
 </div>
-    <button type="button" class="add-ingredient[]">Adicionar</button>
+<button type="button" class="add-ingredient">Adicionar</button>
 
-    
+
 <div class="item" id="actions">
     <p>Modo de preparo</p>
-        <div class="action">
-            {%for action in recipe.preparation%}
-            <input type="text" name="preparation[]" value="{{preparation}}" placeholder="Digite uma ação"/>
-            {%endfor%}
-            <input type="text" name="preparation[]"  placeholder="Digite uma ação"/>
-        </div>
+    <div class="action">
+        {% for preparation in recipe.preparation %}
+        <input type="text" name="preparation[]" value="{{preparation}}" placeholder="Digite uma ação" />
+        {%endfor%}
+        <input type="text" name="preparation[]" placeholder="Digite uma ação" />
     </div>
+</div>
 
 <div class="item">
-        <div>Informações adicionais</div>
-        <div>
-             <textarea name="information"  placeholder="Digite as informações extras" value="{{recipe.information}}"></textarea>
-        </div>
-        <script src="/scripts/admin-feature.js"></script>
+
+    <div>Informações adicionais</div>
+    <div>
+        <textarea name="information" cools="30" rows="10" placeholder="Digite as informações extras"
+            value="{{recipe.information}}"></textarea>
     </div>
+    <script src="/scripts/admin-feature.js"></script>
+</div>

@@ -10,14 +10,13 @@
 {% endblock links %}
 
 {% block header %}
-			<div class="black">
-				<div class="logo">
-					<img src="/assets/logo2.png" alt="">
-					<a class="top-link-recipe" href="/admin/recipes">Receitas</a>
-					<a class="top-link-chefs" href="/admin/chefs">Chefs</a>
-
-				</div>
-			</div>
+<div class="black">
+	<div class="logo">
+		<img src="/assets/logo2.png" alt="">
+		<a class="top-link-recipe" href="/admin/recipes">Receitas</a>
+		<a class="top-link-chefs" href="/admin/chefs">Chefs</a>
+	</div>
+</div>
 {% endblock header %}
 
 {% block content %}
@@ -34,20 +33,20 @@
 
 <section class="cards">
 	{% for chef in chefs %}
-		<div class="card" id="{{chef.id}}">
-			<img src="{{chef.avatar_url}}" alt="{{chef.id}}">
+	<div class="card" id="{{chef.id}}">
+		<img src="{{chef.avatar_url}}" alt="{{chef.id}}">
+
 		<div class="info-left">
 			<div class="info">
 				<h1>{{chef.name}}</h1>
-
+				<p>4 Receitas</p>
 			</div>
 		</div>
 
-			<div class="visualizar">
-				<a href="/admin/chefs/{{chef.id}}">Visualizar</a>
-      		</div>
-			  
+		<div class="visualizar">
+			<a href="/admin/chefs/{{chef.id}}">Visualizar</a>
 		</div>
+	</div>
 	{% endfor %}
 </section>
 
@@ -59,4 +58,3 @@
 </footer>
 
 {% endblock footer %}
-

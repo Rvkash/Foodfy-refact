@@ -23,29 +23,16 @@
 				<h5>Receita: {{recipe.title}}</h5>
 
 				<div class="edit"><a href="/admin/recipes/{{recipe.id}}/edit" class="button">
-<<<<<<< HEAD
 						Editar</a>
 				</div>
 			</div>
-
 			<div class="recipe-image">
 				<img src="{{recipe.image}}" alt="imagem de {{recipe.title}}">
-=======
-						Editar</a></div>
-			</div>
-
-			<div class="recipe-image">
-				<img src="{{recipe.image}}" alt="imagem de {{recipe.name}}">
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 			</div>
 
 			<div class="recipe-info">
 				<div>
-<<<<<<< HEAD
 					<h2>{{recipe.title}}</h2>
-=======
-					<h2>{{recipe.name}}</h2>
->>>>>>> 2b1cf99f0bc91a6c1253a7d4da18ccd4f5220512
 				</div>
 				<div>
 					<p>{{recipe.author}}</p>
@@ -56,9 +43,10 @@
 				<div>
 					<h3> Ingredientes </h3>
 				</div>
+				
 				<ul>
 					{% for ingredient in recipe.ingredients %}
-					<li>{{ingredient}}</li>
+						<li>{{ingredient}}</li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -67,11 +55,13 @@
 				<div>
 					<h3> Modo de preparo </h3>
 				</div>
+
 				<ul>
-					{% for action in recipe.preparation %}
-					<li>{{preparation}}</li>
+					{% for preparation in recipe.preparation %}
+						<li>{{preparation}}</li>
 					{% endfor %}
 				</ul>
+
 			</div>
 
 			<div class="recipe-information">

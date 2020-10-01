@@ -52,15 +52,18 @@ h2 {
 }
 
 .details .item {
+    margin-left: 40px;
     padding: 10px;
     font-size: 12px;
     font-weight: 700;
     color: white;
-
-
+    
 }
 
 input {
+    margin-left: 40px;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     padding: 8px;
     border-radius: 5px;
@@ -69,16 +72,8 @@ input {
 
 }
 
-textarea {
-    width: 80%;
-    border-radius: 10px;
-    height: 80px;
-    margin-top: 8px;
 
-}
-
-input::placeholder,
-textarea::placeholder {
+input::placeholder {
     text-align: left;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
@@ -86,21 +81,6 @@ textarea::placeholder {
 
 }
 
-#ingredients,
-#actions {
-    padding: 10px;
-    font-size: 12px;
-    font-weight: 700;
-    color: white;
-
-}
-
-#ingredients p,
-#actions p {
-    font-size: 12px;
-    font-weight: 700;
-    color: white;
-}
 
 .save,
 .delete {
@@ -126,20 +106,6 @@ textarea::placeholder {
     align-items: center;
     color: white;
 
-}
-
-.add-ingredient,
-.add-action {
-    text-align: center;
-    text-decoration: none;
-    padding: 4px 8px;
-    background-color: rgb(255, 148, 116);
-    color: white;
-    border-radius: 8px;
-    font-size: 12px;
-    margin-left: 10px;
-    margin-top: 10px;
-    
 }
 
 footer {

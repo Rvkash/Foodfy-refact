@@ -24,10 +24,10 @@ recipe-image {
 }
 
 .recipe-image img {
-	width: 75vw;
-	height: 60vh;
-	margin-left: 12vmax;
-	border-radius: 15px;
+	width: 20vw;
+	height: 30vh;
+	margin-left: 40vmax;
+	border-radius: 60px;
 	margin-bottom: 20px;
 
 }
@@ -61,7 +61,7 @@ h5 {
 
 .edit a {
 	padding: 4px 24px;
-	background-color: #000000;
+	background-color: #6c32a1;
 	color: white;
 	border-radius: 5px;
 	font-size: 18px;
@@ -73,7 +73,7 @@ h5 {
 }
 
 .edit a:hover {
-	background-color: #25c02c
+	background-color: #7f11aa
 }
 
 .recipe-description {

@@ -59,7 +59,8 @@ module.exports = {
 
 		const values = [
 			data.name,
-			data.avatar_url
+			data.avatar_url,
+			data.id
 		]
 
 		db.query(query, values, function(err, results){

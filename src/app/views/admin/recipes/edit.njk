@@ -29,7 +29,6 @@
     <form id='form-edit' method='POST' action='/admin/recipes/?_method=PUT'>
       <section class="details">
        {%include './fields.njk' %}
-
         <input type="hidden" name='id' value="{{recipe.id}}">
       </form>
     </section>

@@ -3,23 +3,23 @@ const {date} = require('../../lib/utils')
 
 module.exports = {
     index(req, res){
-        Chef.all(function(Chefs) {
-            return res.render('admin/chefs/chefs', {Chefs})
+        Chef.all(function(chefs) {
+            return res.render('admin/chefs/chefs', {chefs})
         })
     },
     show(req, res){
-        Chef.find(req.params.id, function(Chef) {
-            if(!Chef) return res.send("Chef not found!")
+        Chef.find(req.params.id, function(chef) {
+            if(!chef) return res.send("Chef not found!")
 
             Chef.created_at = date(Chef.created_at).format
 
-            return res.render('admin/chefs/show', {Chef})
+            return res.render('admin/chefs/show', {chef})
         })
     },
     edit(req, res){
-        Chef.find(req.params.id, function(Chef) {
-            if(!Chef) return res.send('Chef not found!')
-                return res.render('admin/chefs/edit', {Chef})
+        Chef.find(req.params.id, function(chef) {
+            if(!chef) return res.send('Chef not found!')
+                return res.render('admin/chefs/edit', {chef})
             })
     },
     create(req, res){
@@ -34,8 +34,8 @@ module.exports = {
             }
         }
 
-        Chef.create(req.body, function(Chef) {
-            return res.redirect(`/admin/chefs/${Chef.id}`)
+        Chef.create(req.body, function(chefs) {
+            return res.redirect(`/admin/chefs/${chefs.id}`)
         })
     },
     put(req, res){

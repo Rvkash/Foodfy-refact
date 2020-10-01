@@ -1,11 +1,11 @@
 {% extends "../layout.njk" %}
 
 {%block title%}
-  <link rel="stylesheet" href="/admin/edit.css">
+  <link rel="stylesheet" href="/admin/chef/edit.css">
   <title>
     Editar Chef
   </title>
-  <a href="/admin/recipes">
+  <a href="/admin/chefs">
   	<div class="black">
 				<div class="logo">
 					<img src="/assets/logo2.png" alt="">
@@ -28,7 +28,7 @@
     </div>
     <form id='form-edit' method='POST' action='/admin/chefs/?_method=PUT'>
       <section class="details">
-       {%include './fields.njk' %}
+       {%include './fieldsChef.njk' %}
 
         <input type="hidden" name='id' value="{{chef.id}}">
       </form>

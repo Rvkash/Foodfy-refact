@@ -16,7 +16,6 @@
 					<img src="/assets/logo2.png" alt="">
 					<a class="top-link-recipe" href="/admin/recipes">Receitas</a>
 					<a class="top-link-chefs" href="/admin/chefs">Chefs</a>
-
 				</div>
 			</div>
 			
@@ -38,11 +37,11 @@
 	{% for recipe in recipes %}
 		<div class="card" id="{{recipe.id}}">
 			<img src="{{recipe.image}}" alt="{{recipe.id}}">
+
 		<div class="info-left">
 			<div class="info">
 				<h1>{{recipe.title}}</h1>
 				<p>{{recipe.author}}</p>
-				
 			</div>
 		</div>
 
