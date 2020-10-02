@@ -11,7 +11,7 @@ module.exports = {
         Chef.find(req.params.id, function(chef) {
             if(!chef) return res.send("Chef not found!")
 
-            Chef.created_at = date(Chef.created_at).format
+            chef.created_at = date(chef.created_at).format
 
             return res.render('admin/chefs/show', {chef})
         })

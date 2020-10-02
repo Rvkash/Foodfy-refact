@@ -68,6 +68,8 @@ body {
 }
 
 .visualizar a {
+	display: flex;
+	margin-top: 3px;
 	font-size: 15px;
 	text-decoration: none;
 	color: rgb(15, 71, 226);

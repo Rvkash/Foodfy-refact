@@ -26,7 +26,7 @@
 					<a href="/admin/chefs/{{chef.id}}/edit" class="button">Editar</a>
 				</div>
 			</div>
-			
+
 			<div class="recipe-image">
 				<img src="{{chef.avatar_url}}" alt="{{chef.name}}">
 			</div>
@@ -34,10 +34,31 @@
 			<div class="recipe-info">
 				<div>
 					<h2>{{chef.name}}</h2>
-					<p>4 Receitas</p>
+					<p> recipes</p>
+					<p>Membro desde: {{chef.created_at}}</p>
 				</div>
 			</div>
-	
+
+			<div class="recipes-total">
+				<div>
+					<h2>Receitas</h2>
+				</div>
+
+			<div class="cards">
+            {%for recipe in recipes%}
+                <div class="card" id="{{recipe.id}}">
+                    <div>
+                        <img src="{{recipe.image}}" alt="{{recipe.id}}">
+                    </div>
+                    <div>
+                        <h3>{{recipe.title}}</h3>
+                        <h4>by{{recipe.chefs_name}}</h4>
+                        <a href="/admin/recipes/{{recipe.id}}" id="visualize-recipe">Visualize</a>
+                    </div>
+			{%endfor%}
+                </div>
+            
+
 
 
 		</section>

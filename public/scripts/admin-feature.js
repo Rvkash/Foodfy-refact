@@ -30,6 +30,7 @@ function addAction () {
   newField.children[0].value = ''
 
   actions.appendChild(newField)
+  
 }
 
 const action = document.querySelector('.add-action')
