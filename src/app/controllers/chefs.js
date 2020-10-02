@@ -9,11 +9,17 @@ module.exports = {
     },
     show(req, res){
         Chef.find(req.params.id, function(chef) {
-            if(!chef) return res.send("Chef not found!")
+            if(!chef) return res.send('Chef not found!')
 
-            chef.created_at = date(chef.created_at).format
+            Chef.findTotalRecipes(chef.id, function(recipe){
 
-            return res.render('admin/chefs/show', {chef})
+                Chef.findRecipes(chef.id, function(recipes){
+
+                    chef.created_at = date(chef.created_at).format
+        
+                    return res.render('admin/chefs/show', {chef, recipe, recipes})
+                })
+            })
         })
     },
     edit(req, res){
@@ -52,8 +58,16 @@ module.exports = {
         })
     },
     delete(req, res){
-        Chef.delete(req.body.id, function() {
-            return res.redirect(`/admin/chefs`)
+        Chef.totalRecipesByChef(req.body.id, function(chef){
+            
+            if(chef.total_recipes > 0) {
+                return res.send('Não é possível deletar chefs com receitas cadastradas!')
+            } else {
+                Chef.delete(req.body.id, function() {
+                    return res.redirect(`/admin/chefs`)
+                })
+            }
+
         })
     }
 }
