@@ -34,34 +34,36 @@
 			<div class="recipe-info">
 				<div>
 					<h2>{{chef.name}}</h2>
-					<p> recipes</p>
+					<h4>Receitas: {{recipe.total_recipes}}</h4>
 					<p>Membro desde: {{chef.created_at}}</p>
 				</div>
 			</div>
 
-			<div class="recipes-total">
-				<div>
-					<h2>Receitas</h2>
+			<div class="recipes-chef">
+				<h1>Receitas Criadas</h1>
+			</div>
+
+			<section class="cards-chef">
+				{% for recipe in recipes %}
+				<div class="card" id="{{recipe.id}}">
+					<img src="{{recipe.image}}" alt="{{recipe.id}}">
+
+					<div class="info-left">
+						<div class="info">
+							<h1>{{recipe.title}}</h1>
+							<p>{{recipe.chefs_name}}</p>
+						</div>
+					</div>
+
+					<div class="visualizar">
+						<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+					</div>
 				</div>
+				{% endfor %}
 
-			<div class="cards">
-            {%for recipe in recipes%}
-                <div class="card" id="{{recipe.id}}">
-                    <div>
-                        <img src="{{recipe.image}}" alt="{{recipe.id}}">
-                    </div>
-                    <div>
-                        <h3>{{recipe.title}}</h3>
-                        <h4>by{{recipe.chefs_name}}</h4>
-                        <a href="/admin/recipes/{{recipe.id}}" id="visualize-recipe">Visualize</a>
-                    </div>
-			{%endfor%}
-                </div>
-            
+			</section>
 
 
-
-		</section>
 	</div>
 </div>
 

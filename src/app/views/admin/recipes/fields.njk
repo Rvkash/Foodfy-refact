@@ -10,10 +10,17 @@
     </div>
 </div>
 
+
 <div class="item">
-    <div>Autor da receita</div>
+    <div>Nome do chef cadastrado</div>
     <div>
-        <input type="text" name="author" placeholder="Digite seu nome" value="{{recipe.author}}">
+        <select name="chef">
+            {%for chef in chefOptions%}
+            <option value="{{chef.id}}" {%if recipe.chef_id == chef.id%}selected{%endif%}>
+                {{chef.name}}
+            </option>
+            {%endfor%}
+        </select>
     </div>
 </div>
 
@@ -42,13 +49,8 @@
 <div class="item">
     <div>Informações adicionais</div>
     <div>
-        <textarea 
-        name="information" 
-        cools="30" 
-        rows="10" 
-        placeholder="Digite as informações extras"
-        value="{{recipe.information}}"
-        >
+        <textarea name="information" cools="30" rows="10" placeholder="Digite as informações extras"
+            value="{{recipe.information}}">
         </textarea>
     </div>
     <script src="/scripts/admin-feature.js"></script>
