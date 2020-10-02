@@ -63,8 +63,12 @@ body {
 	object-fit: cover;
 	border-radius: 50%;
 	margin-bottom: 20px;
+	cursor: pointer
 
+}
 
+.card img:hover {
+	opacity: 80%;
 }
 
 
@@ -91,9 +95,10 @@ body {
 .visualizar a {
 	display: flex;
 	margin-top: 5px;
-	font-size: 12px;
+	font-size: 15px;
 	text-decoration: none;
 	color: rgb(15, 71, 226);
+	
 }
 
 footer {

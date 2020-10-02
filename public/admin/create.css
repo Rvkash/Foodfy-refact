@@ -32,7 +32,7 @@ body {
 }
 
 .black .logo {
-	height: 100px;
+	height: 90px;
 	display: flex;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
@@ -84,11 +84,12 @@ select {
 }
 
 select {
-	width: 600px;
+	width: 528px;
+	background-color: white;
 }
 
 textarea {
-	width: 560px;
+	width: 528px;
 	margin-right: 10px;
 	border-radius: 5px;
 	height: 80px;
@@ -168,4 +169,9 @@ footer p {
 .add-ingredient:hover {
 	background-color: #23e94e;
 }
+
+.top {
+	margin-top: 20px;
+}
+
 

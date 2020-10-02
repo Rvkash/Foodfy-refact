@@ -98,6 +98,12 @@ h5 {
 	
 }
 
+.recipe-info h4 {
+	text-align: center;
+	margin-right: 15vmax;
+	font-size: 20px;
+}
+
 .recipe-info p {
 	text-align: center;
 	color: #a5a4a4;
@@ -162,7 +168,68 @@ footer p {
 
 }
 
-.recipes-total h2 {
-	margin-left: 10vmax;
+.cards-chef {
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 50px;
+	padding: 0 7vmax 0;
+	gap: 90px;
+
+}
+
+.cards-chef img {
+		width: 24vw;
+		height: 20vh;
+		object-fit: cover;
+		border-radius: 10px;
+		cursor: pointer;
+}
+
+.cards-chef img:hover {
+	opacity: 80%;
+}
+
+.recipes-chef h1 {
+	margin-top: 20px;
+	margin-left: 7vmax;
+}
+
+.cards-chef .card {
+	padding: 0;
+	font-size: 15px;
+}
+
+	
+.cards-chef .card .visualizar {
+	text-decoration: none;
+
+}
+
+.visualizar a {
+	display: flex;
+	margin-top: 3px;
+	font-size: 15px;
+	text-decoration: none;
+	color: rgb(15, 71, 226);
+}
+
+.info p {
+	font-size: 14px;
+	color: #777777;
+
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.info h1 {
+	font-size: 18px;
+	color: #111111;
+	display: grid;
+
+
+	font-weight: 500;
+	line-height: 21px;
+	margin-bottom: 5px;
 }
 
