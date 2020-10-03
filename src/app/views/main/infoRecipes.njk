@@ -1,29 +1,22 @@
-{% extends '../main/layout.njk' %}
-../../
+{%extends '../layout.njk' %}
 
 
 {%block title %}
 <title>Foodfy</title>
-
 
 {%endblock%}
 
 {% block content%}
 <header>
     <link rel="stylesheet" href="../../main/infoRecipes.css">
-    <a>
-        <img src="/assets/logo.png" alt="Logo Foodfy" />
-    </a>
-    <a href="/about">Sobre</a>
-    <a href="/recipes">Receitas</a>
 </header>
 
 <main>
     <section class="recipe">
         <div id="img">
             <img src="{{recipe.image}}" alt="{{recipe.id}}">
-            <h3>{{item.title}}</h3>
-            <p>{{item.author}}</p>
+            <h3>{{recipe.title}}</h3>
+            <p>{{recipe.chefs_name}}</p>
         </div>
 
         <div id="ingredientes">
@@ -52,5 +45,5 @@
     </section>
 </main>
 
-<script src="../public/scripts/admin-feature.js"></script>
+<script src="/scripts/infoRecipes.js"></script>
 {%endblock%}
