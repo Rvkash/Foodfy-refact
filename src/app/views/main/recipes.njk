@@ -1,4 +1,5 @@
-{%extends '../main/layout.njk' %}
+{%extends '../layout.njk' %}
+
 
 {% block head %}
 <title>Receitas</title>
@@ -7,29 +8,29 @@
 
 {% block content %}
 
-	<header>
-		<a>
-			<img src="/assets/logo.png" alt="Logo Foodfy" />
-		</a>
-		<a href="/about">Sobre</a>
-		<a href="/recipes">Receitas</a>
-		<a href="/admin">
-
+<header>
  </header>
 </section>
 
 
 <section class="cards">
-	{% for item in items %}
-	<div class="card" name="{{item.title}}">
-		<img src="{{item.image}}">
-		<div class="info">
-			<h1>{{item.title}}</h1>
-			<p>{{item.author}}</p>
-		</div>
-	</div>
-	{% endfor %}
+	{% for recipe in recipes %}
+		<div class="card" id="{{recipe.id}}">
+			<img src="{{recipe.image}}" alt="{{recipe.id}}">
 
+		<div class="info-left">
+			<div class="info">
+				<h1>{{recipe.title}}</h1>
+				<p>{{recipe.chefs_name}}</p>
+			</div>
+		</div>
+
+			<div class="visualizar">
+				<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+      		</div>
+			  
+		</div>
+	{% endfor %}
 </section>
 
 <script src="/scripts/recipes.js"></script>
