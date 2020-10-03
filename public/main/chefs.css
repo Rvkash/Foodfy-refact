@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  padding: 0px 12vmax;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cards .avatar-chef {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards .avatar-chef img {
+    width: 15vw;
+    height: 30vh;
+    border-radius: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
