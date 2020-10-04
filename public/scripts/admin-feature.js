@@ -1,5 +1,5 @@
 // Novo ingrediente ===
-function addIngredient () {
+function addIngredient() {
   const ingredients = document.querySelector('#ingredients')
 
   const fieldContainer = document.querySelectorAll('.ingredient')
@@ -15,10 +15,12 @@ function addIngredient () {
 
 const ingredients = document.querySelector('.add-ingredient')
 
-if (ingredients) { ingredients.addEventListener('click', addIngredient) }
+if (ingredients) {
+  ingredients.addEventListener('click', addIngredient)
+}
 
 // Novo passo de preparo ===
-function addAction () {
+function addAction() {
   const actions = document.querySelector('#actions')
 
   const fieldContainer = document.querySelectorAll('.action')
@@ -30,9 +32,11 @@ function addAction () {
   newField.children[0].value = ''
 
   actions.appendChild(newField)
-  
+
 }
 
 const action = document.querySelector('.add-action')
 
-if (action) { action.addEventListener('click', addAction) }
+if (action) {
+  action.addEventListener('click', addAction)
+}
