@@ -26,6 +26,11 @@ Foodfy é um website com receitas e ingredientes, desenvolvido no bootcamp da Ro
     <img src="imggif/ezgif.com-video-to-gif(2).gif">
 </h1>
 
+<h1 align="center">
+    <img src="imggif/foodfyadmin.gif">
+</h1>
+
+
 ## ⌨ Como executar o projeto
 ```bash
 # Clonar o repositório
