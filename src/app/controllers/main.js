@@ -1,39 +1,52 @@
-const recipesData = require('../../../public/scripts/data')
+const Main = require('../models/Main')
 
-exports.home = function (req, res) {
-  return res.render('main/index', {
-    items: recipesData
-  })
-}
+module.exports =  {
+  index(req,res){
+    Main.all(function(recipes){
+      return res.render('main/index', {recipes})
+    })
+  },
+  recipes(req,res){
+    Main.all(function(recipes) {
+      return res.render('main/recipes', {recipes})
+    })
+  },
+  chefs(req,res){
+    Main.allChefs(function(chefs){
+      return res.render('main/chefs', {chefs})
+    })
+  },
+  show(req,res) {
+    Main.findChefs(req.params.id, function(chef) {
+      if(!chef) return res.send('Chef not found!')
 
-exports.about = function (req, res) {
-  return res.render('main/about')
-}
+            Main.findChefTotalRecipes(chef.id, function(recipe){
 
-exports.recipes = function (req, res) {
-  return res.render('main/recipes', {
-    items: recipesData
-  })
-},
+                Main.findChefRecipes(chef.id, function(recipes){
 
-exports.chefs = function(req, res) {
-  return res.render('main/chefs')
-}
+                    chef.created_at = date(chef.created_at).format
+        
+                    return res.render('site/chefs/details', {chef, recipe, recipes})
+                })
+            })
+        })
+    },
+  search(req, res) {
+    const { filter } = req.query 
 
-exports.details = function (req, res) { // params
-  const index = req.params.index
+    Main.findByRecipes(filter, function(recipes){
+      return res.render('main/search', {recipes, filter})
+    })
+  },
+  about(req, res){
+      return res.render('main/about')
+  },
+  infoRecipes(req, res){
+     Main.findRecipes(req.params.id, function(recipe){
+          if(!recipe) return res.send('Recipe not found!')
 
-  const recipe = recipesData.find(function (recipe) {
-    if (recipesData[index]) {
-      return true
-    }
-  })
+          return res.render('main/infoRecipes', {recipe})
+      })
 
-  if (!recipe) {
-    return res.send('Recipe not found!')
   }
-
-  return res.render('main/infoRecipes', {
-    recipe: recipesData[index]
-  })
 }
