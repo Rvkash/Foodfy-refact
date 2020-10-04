@@ -1,5 +1,5 @@
 const Chef = require('../models/Chef')
-const {date} = require('../../lib/utils')
+const { date } = require('../../lib/utils')
 
 module.exports = {
     index(req, res){
