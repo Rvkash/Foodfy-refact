@@ -15,9 +15,10 @@ const routes = express.Router()
 routes.get('/', main.index)
 routes.get('/recipes', main.recipes)    
 routes.get('/chefs', main.chefs)    
+routes.get('/search', main.search)
 routes.get('/about', main.about)
-routes.get('/infoRecipes/:id', main.infoRecipes)
 routes.get('/chefs/:id', main.show)
+routes.get('/infoRecipes/:id', main.infoRecipes)
 
 
 // Admin
