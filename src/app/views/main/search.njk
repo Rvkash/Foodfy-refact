@@ -1,21 +1,13 @@
-{%extends '../layout.njk' %}
-
+{% extends '../layout.njk' %}
 
 {% block head %}
-<title>Receitas</title>
-<link rel="stylesheet" href="../../main/recipes.css">
-<link rel="stylesheet" href="../../main/styles.css">
-
-{% endblock head%}
+<title>Search...</title>
+<link rel="stylesheet" href="../../main/search.css">
+{%endblock head%}
 
 {% block content %}
-
-<header>
-</header>
-</section>
-
-
 <section class="cards">
+ <h2 class="search-page">Procurando por "{{filter}}"</h2>
 	{% for recipe in recipes %}
 	<div class="card" id="{{recipe.id}}">
 		<img src="{{recipe.image}}" alt="{{recipe.id}}">
@@ -28,11 +20,10 @@
 		</div>
 
 		<div class="visualizar">
-			<a href="/infoRecipes/{{recipe.id}}">Visualizar</a>
+			<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
 		</div>
 
 	</div>
 	{% endfor %}
 </section>
-
-{% endblock %}
+{% endblock content%}
