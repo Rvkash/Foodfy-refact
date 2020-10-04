@@ -96,7 +96,7 @@ module.exports = {
 		const values = [
 			data.name,
 			data.avatar_url,
-			data.created_at,
+			date(Date.now()).iso,
 			data.id
 		]
 
