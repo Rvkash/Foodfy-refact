@@ -40,7 +40,7 @@ module.exports = {
         
 
         Recipe.create(req.body, function(recipe) {
-            return res.redirect(`/admin/recipes/${recipe.id}`)
+            return res.render(`/admin/recipes/${recipe.id}`)
         })
     },
     put(req, res){
