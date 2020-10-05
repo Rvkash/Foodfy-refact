@@ -1,5 +1,6 @@
 const db = require('../../config/db')
 
+
 module.exports = {
     all(callback){
         db.query(`SELECT recipes.*, chefs.name AS chefs_name
@@ -37,7 +38,7 @@ module.exports = {
             SELECT recipes.*, chefs.name AS chefs_name
             FROM recipes
             LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
-            WHERE recipes.title ILIKE '%${filter}%'`, function(err, results) {
+            WHERE recipes.title ILIKE '%${filter}%'` , function(err, results) {
                 if(err) throw `Database error! ${err}`
     
                 callback(results.rows)
