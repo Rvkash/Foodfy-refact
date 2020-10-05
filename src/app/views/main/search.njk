@@ -6,8 +6,9 @@
 {%endblock head%}
 
 {% block content %}
+<h2 class="search-page">Procurando por "{{filter}}"</h2>
+
 <section class="cards">
- <h2 class="search-page">Procurando por "{{filter}}"</h2>
 	{% for recipe in recipes %}
 	<div class="card" id="{{recipe.id}}">
 		<img src="{{recipe.image}}" alt="{{recipe.id}}">

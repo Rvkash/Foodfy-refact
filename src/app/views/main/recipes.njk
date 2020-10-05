@@ -5,19 +5,16 @@
 <title>Receitas</title>
 <link rel="stylesheet" href="../../main/recipes.css">
 <link rel="stylesheet" href="../../main/styles.css">
-
 {% endblock head%}
 
 {% block content %}
 
 <header>
 </header>
-</section>
 
-
-<section class="cards">
+<section class="cards-recipes">
 	{% for recipe in recipes %}
-	<div class="card" id="{{recipe.id}}">
+	<div class="card-recipes" id="{{recipe.id}}">
 		<img src="{{recipe.image}}" alt="{{recipe.id}}">
 
 		<div class="info-left">
