@@ -47,6 +47,5 @@ module.exports =  {
 
           return res.render('main/infoRecipes', {recipe})
       })
-
-  }
+   }
 }
