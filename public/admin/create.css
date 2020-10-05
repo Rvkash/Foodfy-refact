@@ -12,38 +12,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.black {
-	background-color: #111111;
-	padding: 0px;
-	margin: 0px;
-}
-
-.black a {
-	font-weight: 400;
-    font-size: 16px;
-    line-height: 15px;
-	margin-left: 10px;
-    color: #ffffff;
-    text-decoration: none;
-	margin: 10px;
-
-	align-items: center;
-	justify-content: center;
-}
-
-.black .logo {
-	height: 90px;
-	display: flex;
-	grid-template-columns: 1fr 1fr 1fr;
-	align-items: center;
-}
-
-
-.black .logo img {
-	padding: 28px;
-	margin-left: 185.4px;
-
-}
+/* menu-global */
 
 .form-header {
 	display: flex;
@@ -51,8 +20,8 @@ body {
 	align-items: center;
 	width: 620px;
 	margin: 0 auto;
-	
 }
+
 
 .form-header-edit {
 	display: flex;
@@ -61,6 +30,8 @@ body {
 	width: 620px;
 	margin: 0 30vw;
 }
+
+
 /*==FORM==*/
 
 .details {
@@ -68,11 +39,13 @@ body {
 	margin: 0 auto;
 }
 
+
 .details .item {
 	padding: 10px;
 	font-size: 14px;
 	font-weight: 700;
 }
+
 
 input,
 select {
@@ -83,10 +56,12 @@ select {
 	border: solid #ddd5d5  2px;
 }
 
+
 select {
 	width: 528px;
 	background-color: white;
 }
+
 
 textarea {
 	width: 528px;
@@ -99,6 +74,7 @@ textarea {
 	resize: vertical;
 }
 
+
 input::placeholder,
 textarea::placeholder {
 	text-align: left;
@@ -107,12 +83,14 @@ textarea::placeholder {
 	font-size: 18px;
 }
 
+
 #ingredients,
 #preparation {
 	padding: 10px;
 	font-size: 14px;
 	font-weight: 700;
 }
+
 
 .save {
 	width: 100px;
@@ -128,28 +106,11 @@ textarea::placeholder {
 
 }
 
+
 .save:hover {
 	background-color: #23e94e;
 }
 
-footer {
-    background: #000000;
-    height: 62px;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin-top: 20vmax;
-
-}
-
-footer p {
-    font-size: 14px;
-    color: #999999;
-    font-weight: 400;
-    line-height: 16px;
-    padding: 22px;
-}
 
 .add-ingredient {
 	width: 100px;
@@ -166,9 +127,11 @@ footer p {
 	cursor: pointer;
 }
 
+
 .add-ingredient:hover {
 	background-color: #23e94e;
 }
+
 
 .top {
 	margin-top: 20px;

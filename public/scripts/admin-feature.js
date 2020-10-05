@@ -1,4 +1,4 @@
-// Novo ingrediente ===
+// New ingredient
 function addIngredient() {
   const ingredients = document.querySelector('#ingredients')
 
@@ -19,7 +19,7 @@ if (ingredients) {
   ingredients.addEventListener('click', addIngredient)
 }
 
-// Novo passo de preparo ===
+// New Step 
 function addAction() {
   const actions = document.querySelector('#actions')
 
@@ -36,7 +36,6 @@ function addAction() {
 }
 
 const action = document.querySelector('.add-action')
-
 if (action) {
   action.addEventListener('click', addAction)
 }

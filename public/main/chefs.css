@@ -12,18 +12,49 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.cards .avatar-chef {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+cards-chef .avatar-chef {
+    margin: 0 50px 0;
+
 }
 
-.cards .avatar-chef img {
-    width: 15vw;
-    height: 30vh;
+.cards-chef  {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cards-chef .avatar-chef img {
+    width: 10vw;
+    height: 22vh;
+    padding: 5px;
+    border: 2px solid rgb(118, 44, 141);
+    object-fit: cover;
+
+    margin: 3vmax 0 0;
     border-radius: 100%;
 }
 
-a {
+.cards-chef .avatar-chef {
+  align-items: center;
+  justify-content: center;
+  display:flex;
+}
+
+.card-chef a {
     text-decoration: none;
+}
+
+.card-chef img:hover {
+	opacity: 80%;
+}
+
+.info {
+  margin-top: 5px;
+}
+
+p {
+  margin: 5px 0 0;
 }
 

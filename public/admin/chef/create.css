@@ -66,9 +66,11 @@ select {
 	border: solid #ddd5d5  2px;
 }
 
+
 select {
 	width: 600px;
 }
+
 
 textarea {
 	width: 560px;
@@ -81,6 +83,7 @@ textarea {
 	resize: vertical;
 }
 
+
 input::placeholder,
 textarea::placeholder {
 	text-align: left;
@@ -89,12 +92,14 @@ textarea::placeholder {
 	font-size: 18px;
 }
 
+
 #ingredients,
 #preparation {
 	padding: 10px;
 	font-size: 14px;
 	font-weight: 700;
 }
+
 
 .save {
 	width: 100px;
@@ -107,12 +112,13 @@ textarea::placeholder {
 	background-color: #000000;
 	border-radius: 5px;
 	cursor: pointer;
-
 }
+
 
 .save:hover {
 	background-color: #23e94e;
 }
+
 
 footer {
     background: #000000;
@@ -122,8 +128,8 @@ footer {
     left: 0;
     text-align: center;
     margin-top: 20vmax;
-
 }
+
 
 footer p {
     font-size: 14px;
@@ -132,6 +138,7 @@ footer p {
     line-height: 16px;
     padding: 22px;
 }
+
 
 .add-ingredient {
 	width: 100px;
@@ -147,6 +154,7 @@ footer p {
 	border-radius: 5px;
 	cursor: pointer;
 }
+
 
 .add-ingredient:hover {
 	background-color: #23e94e;

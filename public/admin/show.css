@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
+
 body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -7,41 +8,33 @@ body {
 	/* height: 50vh; */
 }
 
-.logo {
-	background-color: #000000;
-	padding: 26px;
-}
+/* menu-global */
 
-.logo img {
-	margin-left:130px
-}
-
-recipe-image {
-	margin-left: 15vmax;
-	border-radius: 11px;
-	padding: 10px;
-
-}
 
 .recipe-image img {
 	width: 75vw;
 	height: 60vh;
-	margin-left: 12vmax;
-	border-radius: 15px;
-	margin-bottom: 20px;
 
+	margin-left: 12vmax;
+	margin-bottom: 20px;
+	border-radius: 19px;
 }
+
+
 
 h2 {
-	margin-top: 20px;
-	font-size: 30px;
+	margin-top: 25px;
+	font-size: 20px;
 }
 
+
+
 h3 {
+	margin: 15px 0px 10px;
 	font-size: 20px;
-	margin-left: 22px;
-	
 }
+
+
 
 h4 {
 	font-size: 20px;
@@ -49,78 +42,102 @@ h4 {
 	margin-left: 15vmax;
 }
 
+
+
 h5 {
 	font-size: 25px;
 	margin-left: 15vmax;
+	margin-top: 30px;
 }
+
+
 
 .top {
 	display: flex;
 	justify-content: space-between;
 }
 
+
+
 .edit a {
-	padding: 4px 24px;
+	display: flex;
+	padding: 4px 24px;	
 	background-color: #000000;
-	color: white;
 	border-radius: 5px;
+	color: white;
 	font-size: 18px;
+
 	text-align: center;
 	text-decoration: none;
-	display: flex;
-	margin-top: 47px;
+	
+
+	margin-top: 30px;
+	margin-bottom: 15px;
 	margin-right: 18vmax;
 }
+
+
 
 .edit a:hover {
 	background-color: #25c02c
 }
 
+
+
 .recipe-description {
 	margin-left: 15vmax;
-
 }
+
+
 
 .recipe-information {
 	margin-left: 15vmax;
 }
 
 .recipe-img img {
-	border-radius: 10px;
-	margin: 0 auto;
 	max-width: 940px;
+	border-radius: 10px;
 }
+
+
 
 .recipe-info h2 {
 	text-align: center;
 	font-size: 32px;
 	font-weight: 700;
-
 }
+
+
 
 .recipe-info p {
 	text-align: center;
 	color: #a5a4a4;
 	font-size: 20px;
-
 }
+
+
 
 .container-info {
 	display: flex;
 	align-items: center;
 }
 
+
+
 .span span {
 	color: #999999;
 	padding: 0;
 	width: 20%;
 	background: none;
-	transition: 200ms;
 	border: none;
 	cursor: pointer;
 	font-size: 14px;
 	margin-left: 20px;
+
+	transition: 200ms;
 }
+
+
 
 .span:hover {
 	background: none;
@@ -128,49 +145,42 @@ h5 {
 	border: none;
 }
 
+
+
 .content.active {
-	visibility: hidden;
 	width: 0;
 	height: 0;
+	visibility: hidden;
 }
 
+
+
 .content {
-	margin: 0 auto;
 	max-width: 940px;
 	display: flex;
+	margin: 0 auto;
 	align-items: center;
 }
 
+
+
 li {
+	margin-top:12px;
+	margin-right: 15px;
+	padding: 3px;
 	font-size: 18px;
 	color: #444444;
 	line-height: 20px;
 }
 
 ul {
+	margin-top:12px;
 	font-size: 18px;
 	color: #444444;
 }
 
 
-footer {
-	background: #000000;
-	height: 90px;
-	position: absolute;
-	width: 100%;
-	left: 0;
-	text-align: center;
-	margin-top: 35vmax;
-}
 
-footer p {
-   font-size: 14px;
-   color: #999999;
-   font-weight: 400;
-   line-height: 16px;
-   padding: 22px;
-
-}
 
 
 
