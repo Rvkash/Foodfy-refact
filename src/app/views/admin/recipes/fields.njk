@@ -13,7 +13,7 @@
 
 <div class="item">
     <div>Nome do chef cadastrado</div>
-    <div>
+    <div class="select">
         <select name="chef">
             {%for chef in chefOptions%}
             <option value="{{chef.id}}" {%if recipe.chef_id == chef.id%}selected{%endif%}>
@@ -49,7 +49,7 @@
 <div class="item">
     <div>Informações adicionais</div>
     <div>
-        <textarea name="information" cools="30" rows="10" placeholder="Digite as informações extras"
+        <textarea name="information" cools="10" rows="10" placeholder="Digite as informações extras"
             value="{{recipe.information}}">
         </textarea>
     </div>

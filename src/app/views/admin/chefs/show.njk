@@ -2,17 +2,11 @@
 
 
 {% block title %}
-<link rel="stylesheet" href="/admin/chef/show.css">
-<title>{{chef.name}}</title>
+<link rel="stylesheet" href="../../../admin/chef/show.css">
+<link rel="stylesheet" href="../../../admin/menu-global.css">
 {% endblock title %}
 
-{% block header %}
-<a href="/admin/recipes">
-	<div class="logo">
-		<img src="/assets/logo2.png" alt="">
-</a>
-</div>
-{% endblock header %}
+
 
 {% block content %}
 
@@ -21,7 +15,6 @@
 		<section class="details">
 			<div class="top">
 				<h5>Chef: {{chef.name}} </h5>
-
 				<div class="edit">
 					<a href="/admin/chefs/{{chef.id}}/edit" class="button">Editar</a>
 				</div>
@@ -32,7 +25,7 @@
 			</div>
 
 			<div class="recipe-info">
-				<div>
+				<div class="info">
 					<h2>{{chef.name}}</h2>
 					<h4>Receitas: {{recipe.total_recipes}}</h4>
 					<p>Membro desde: {{chef.created_at}}</p>

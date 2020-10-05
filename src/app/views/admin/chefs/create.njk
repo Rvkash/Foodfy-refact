@@ -2,18 +2,11 @@
 
 {% block title %}
 <link rel="stylesheet" href="../../admin/chef/create.css">
+<link rel="stylesheet" href="../../admin/menu-global.css">
+
 <title> Criar Chef </title>
 {% endblock title %}
 
-{% block header %}
-		<div class="black">
-			<a href="/">
-			<div class="logo">
-				<img src="/assets/logo2.png" alt="imagem logo">
-			</div>
-			</a>
-		</div>
-{% endblock header %}
 
 {% block links %}
 {% endblock links %}
@@ -22,7 +15,7 @@
 {% block content %}
 
  <form class="card" method="POST" action="/admin/chefs">
-        <section class="details">
+ 	      <section class="details">
             <div class="top">
                 <h2>Criando Chef</h2>
                 <button class="save" type="submit">Salvar</button>

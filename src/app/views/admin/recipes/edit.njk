@@ -2,14 +2,9 @@
 
 {%block title%}
   <link rel="stylesheet" href="/admin/edit.css">
+<link rel="stylesheet" href="../../../admin/menu-global.css">
+
   <title> Editar Receita </title>
-  <a href="/admin/recipes">
-    <div class="black">
-	  <div class="logo">
-	  <img src="/assets/logo2.png" alt="">
-  </a>
-		</div>
-</div>
 {% endblock title %}
 
 
@@ -18,7 +13,7 @@
   <div class="forms">
 
     <div class="top">
-      <h3>{{recipe.title}}</h3>
+      <h3>Receita: {{recipe.title}}</h3>
       <div class="edit-buttons">
         <button type='submit' form='form-delete' class='delete'>Deletar</button>
         <button type='submit' form='form-edit' class='save'>Salvar</button>
