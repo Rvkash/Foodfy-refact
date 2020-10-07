@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <form id='form-edit' method='POST' action='/admin/recipes/?_method=PUT'>
+    <form id='form-edit' method='POST' action='/admin/recipes/?_method=PUT' enctype="multipart/form-data">
       <section class="details">
        {%include './fields.njk' %}
         <input type="hidden" name='id' value="{{recipe.id}}">
