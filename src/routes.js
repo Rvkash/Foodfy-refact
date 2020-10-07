@@ -1,6 +1,7 @@
 const express = require('express')
 const main = require('./app/controllers/main')
 const recipes = require('./app/controllers/admin')
+const multer = require('./app/middlewares/multer')
 const chefs = require('./app/controllers/chefs')
 
 // GET    get resource (abstract or real)
@@ -28,8 +29,8 @@ routes.get('/admin/recipes/:id', recipes.show)
 routes.get('/admin/recipes/:id/edit', recipes.edit)
 
 
-routes.post('/admin/recipes', recipes.post)
-routes.put('/admin/recipes', recipes.put)
+routes.post('/admin/recipes', multer.array("photos", 5), recipes.post)
+routes.put('/admin/recipes', multer.array("photos", 5), recipes.put)
 routes.delete('/admin/recipes', recipes.delete)
 
 // Chefs 
