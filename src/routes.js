@@ -1,8 +1,8 @@
 const express = require('express')
-const main = require('./app/controllers/main')
-const recipes = require('./app/controllers/admin')
+const home = require('./app/controllers/homeController')
+const recipes = require('./app/controllers/recipesController')
+const chefs = require('./app/controllers/chefsController')
 const multer = require('./app/middlewares/multer')
-const chefs = require('./app/controllers/chefs')
 
 // GET    get resource (abstract or real)
 // POST   create or save
@@ -12,14 +12,14 @@ const chefs = require('./app/controllers/chefs')
 
 const routes = express.Router()
 
-// Main
-routes.get('/', main.index)
-routes.get('/recipes', main.recipes)    
-routes.get('/chefs', main.chefs)    
-routes.get('/search', main.search)
-routes.get('/about', main.about)
-routes.get('/chefs/:id', main.show)
-routes.get('/infoRecipes/:id', main.infoRecipes)
+// Home
+routes.get('/', home.index)
+routes.get('/recipes', home.recipes)    
+routes.get('/chefs', home.chefs)    
+routes.get('/search', home.search)
+routes.get('/about', home.about)
+routes.get('/chefs/:id', home.show)
+routes.get('/infoRecipes/:id',home.infoRecipes)
 
 
 // Admin

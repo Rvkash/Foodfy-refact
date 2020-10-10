@@ -17,19 +17,17 @@ module.exports = {
             INSERT INTO recipes (
                 chef_id,
                 title,
-                image,
                 ingredients,
                 preparation,
                 information,
                 created_at
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+            ) VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING id
         `
 
         const values = [
             data.chef,
             data.title,
-            data.image,
             data.ingredients,
             data.preparation,
             data.information,
@@ -64,17 +62,15 @@ module.exports = {
         const query = `
         UPDATE recipes SET
             chef_id=($1),
-            image=($2),
-            title=($3),
-            ingredients=($4),
-            preparation=($5),
-            information=($6)
-        WHERE id = $7
+            title=($2),
+            ingredients=($3),
+            preparation=($4),
+            information=($5)
+        WHERE id = $6
         `
 
         const values = [
             data.chef,
-            data.image,
             data.title,
             data.ingredients,
             data.preparation,
@@ -94,6 +90,11 @@ module.exports = {
 
             callback(results.rows)
         })
+    },
+    files() {   
+        return db.query(`
+            SELECT * FROM files WHERE recipe_files = $1
+        `, [id])
     },
     delete(id, callback) {
         db.query(`DELETE FROM recipes WHERE id = $1`, [id], function(err, results) {
