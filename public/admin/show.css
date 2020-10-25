@@ -14,9 +14,9 @@ body {
 .recipe-image img {
 	width: 75vw;
 	height: 60vh;
-
+	
 	margin-left: 12vmax;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	border-radius: 19px;
 }
 
@@ -30,7 +30,7 @@ h2 {
 
 
 h3 {
-	margin: 15px 0px 10px;
+	margin: 20px 0px 10px;
 	font-size: 20px;
 }
 
@@ -61,11 +61,11 @@ h5 {
 
 .edit a {
 	display: flex;
-	padding: 4px 24px;	
-	background-color: #000000;
+	padding: 10px 24px;	
+	background-color: #5740aa;
 	border-radius: 5px;
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
 
 	text-align: center;
 	text-decoration: none;
@@ -94,10 +94,6 @@ h5 {
 	margin-left: 15vmax;
 }
 
-.recipe-img img {
-	max-width: 940px;
-	border-radius: 10px;
-}
 
 
 
@@ -108,7 +104,6 @@ h5 {
 }
 
 
-
 .recipe-info p {
 	text-align: center;
 	color: #a5a4a4;
@@ -116,12 +111,10 @@ h5 {
 }
 
 
-
 .container-info {
 	display: flex;
 	align-items: center;
 }
-
 
 
 .span span {
@@ -138,7 +131,6 @@ h5 {
 }
 
 
-
 .span:hover {
 	background: none;
 	color: #e98d15;
@@ -146,13 +138,11 @@ h5 {
 }
 
 
-
 .content.active {
 	width: 0;
 	height: 0;
 	visibility: hidden;
 }
-
 
 
 .content {
@@ -178,6 +168,34 @@ ul {
 	font-size: 18px;
 	color: #444444;
 }
+
+/* recipes gallery */
+
+.highlight .gallery-preview {
+	display: flex;
+	margin-left: 70vmax;
+
+}
+
+
+.highlight .gallery-preview img {
+	width: 5vw;
+	height: 10vh;
+	border-radius: 10px;
+	display: flex;
+	opacity: 60%;
+	
+	object-position: 50% 50%;
+	object-fit: none;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+
+
+
+
+
 
 
 
