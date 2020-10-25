@@ -14,12 +14,26 @@
 			<div class="top">
 				<h5>Receita: {{recipe.title}}</h5>
 
-				<div class="edit"><a href="/admin/recipes/{{recipe.id}}/edit" class="button">
-						Editar</a>
+				<div class="edit">
+					<a href="/admin/recipes/{{recipe.id}}/edit" class="button">Editar Receita</a>
 				</div>
 			</div>
-			<div class="recipe-image">
-				<img src="{{recipe.image}}" alt="imagem de {{recipe.title}}">
+			<div class="highlight">
+				<div class="recipe-image">
+					{% if not files[0] %}
+					<img src="http://placehold.it/900X900?text=RECEITA SEM FOTO" alt="imagem de {{recipe.title}}">
+					{% else %}
+					<img src="{{files[0].src}}" alt="{{files[0].name}}">
+					{% endif %}
+				</div>
+
+				<div class="gallery-preview">
+					{% for image in files %}
+					<img src="{{image.src}}" alt="{{image.name}}" {% if loop.index0 == 0 %} class='active' {% endif %}
+						onclick="ImageGallery.setImage(event)"
+						>
+					{% endfor%}
+				</div>
 			</div>
 
 			<div class="recipe-info">
@@ -35,10 +49,10 @@
 				<div>
 					<h3> Ingredientes </h3>
 				</div>
-				
+
 				<ul>
 					{% for ingredient in recipe.ingredients %}
-						<li>{{ingredient}}</li>
+					<li>{{ingredient}}</li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -50,7 +64,7 @@
 
 				<ul>
 					{% for preparation in recipe.preparation %}
-						<li>{{preparation}}</li>
+					<li>{{preparation}}</li>
 					{% endfor %}
 				</ul>
 
@@ -66,9 +80,10 @@
 					{# {% endfor %} #}
 				</ul>
 			</div>
-
 		</section>
 	</div>
+
+	<script src="/scripts/image-gallery.js"></script>
 </div>
 
 {% endblock content %}
