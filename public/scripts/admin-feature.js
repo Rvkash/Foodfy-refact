@@ -1,5 +1,5 @@
 // New ingredient
-function addIngredient() {
+function addIngredient () {
   const ingredients = document.querySelector('#ingredients')
 
   const fieldContainer = document.querySelectorAll('.ingredient')
@@ -10,7 +10,7 @@ function addIngredient() {
 
   newField.children[0].value = ''
 
-  ingredients.appendChild(newField);
+  ingredients.appendChild(newField)
 }
 
 const ingredients = document.querySelector('.add-ingredient')
@@ -18,24 +18,20 @@ const ingredients = document.querySelector('.add-ingredient')
 if (ingredients) {
   ingredients.addEventListener('click', addIngredient)
 }
-
-// New Step 
-function addAction() {
+// New Step
+function addAction () {
   const actions = document.querySelector('#actions')
 
   const fieldContainer = document.querySelectorAll('.action')
 
-  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true)
+  const newField = fieldContainer[fieldContainer.length].cloneNode(true)
 
-  if (newField.children[0].value == '') return false
-
-  newField.children[0].value = ''
+  (newField.children[0].value == '')  return false 
 
   actions.appendChild(newField)
-
 }
 
 const action = document.querySelector('.add-action')
 if (action) {
-  action.addEventListener('click', addAction)
+  action.addEventListener('click', addAction) 
 }
