@@ -11,12 +11,24 @@
 </header>
 
 <main>
-    <section class="recipe">
-        <div id="img">
-            <img src="{{recipe.image}}" alt="{{recipe.id}}">
-            <h3>{{recipe.title}}</h3>
-            <p>{{recipe.chefs_name}}</p>
-        </div>
+
+<div class="highlight">
+				<div class="recipe-image">
+					{% if not files[0] %}
+					<img src="http://placehold.it/900X900?text=RECEITA SEM FOTO" class='active' alt="imagem de {{recipe.title}}">
+					{% else %}
+					<img src="{{files[0].src}}" alt="{{files[0].name}}">
+					{% endif %}
+				</div>
+
+				<div class="gallery-preview">
+					{% for image in files %}
+					<img src="{{image.src}}" alt="{{image.name}}" {% if loop.index0 == 0 %} class='active' {% endif %}
+						onclick="ImageGallery.setImage(event)"
+						>
+					{% endfor%}
+				</div>
+			</div>
 
         <div id="ingredientes">
             <div class="subtitle">
@@ -44,5 +56,6 @@
     </section>
 </main>
 
+<script src="/scripts/image-gallery.js"></script>
 <script src="/scripts/infoRecipes.js"></script>
 {%endblock%}

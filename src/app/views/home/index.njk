@@ -1,6 +1,5 @@
 {%extends '../layout.njk' %}
 
-
 {% block head %}
   <title>Home</title>
   <link rel="stylesheet" href="main/styles.css">
@@ -9,7 +8,6 @@
 {% block content %}
 
 <header>
-
 </header>
 
 <div class="corpo">
@@ -22,25 +20,23 @@
   </div>
 </div>
 
-
 <section class="recipes">
   <h1>Mais acessadas</h1>
   <div class="cards">
-    {% for recipe in recipes %}
+  {% for recipe in recipes %}
     <div class="card">
-      <div class="card_img">
+      <div class="card_img" data.id={{recipe.id}}>
         <img src="{{recipe.image}}" alt="{{recipe.title}}">
       </div>
       <div class="info">
         <h1>{{recipe.title}}</h1>
-        <p>{{recipe.chefs_name}}</p>
+        <p>{{chef.name or recipe.chef_name}}</p>
         <div class="visualizar">
           <a href="/infoRecipes/{{recipe.id}}">Visualizar</a>
         </div>
       </div>
     </div>
-    {% endfor %}
+  {% endfor %}
 </section>
-
 
 {% endblock content %}
