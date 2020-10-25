@@ -5,7 +5,6 @@ const methodOverride = require('method-override')
 const routes = require('./routes')
 const server = express()
 
-
 server.set('view engine', 'njk')
 server.use(express.urlencoded({ extended: true }))
 server.use(express.static('public'))
@@ -17,6 +16,6 @@ nunjucks.configure('src/app/views', {
   noCache: true
 })
 
-server.listen(5001, function () {
+server.listen(5003, function () {
   console.log('Server online')
 })
