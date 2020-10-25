@@ -6,9 +6,9 @@
                id="photos-input" 
                type="file" 
                name="photos"
-               multiple="photos" 
+               multiple
                accept="image/*"
-               onchange="PhotosUpload.handleFileInput(event)"
+               onchange="PhotosUpload.handleFileInput(event, 5)"
             >
               <p>Selecione até 5 fotos</p>
         </div>
@@ -16,20 +16,19 @@
         <div id="photos-preview">
             {%if files %}
                 {%for image in files%}
-                    <div class="photo" id="{{image.id}}">
+                    <div class="photo" id="{{image.file_id}}">
                         <img src="{{image.src}}" alt="{{image.name}}">
-                        <i class="material-icons">close</i>
+                        <i 
+                        class="material-icons"
+                        onclick="PhotosUpload.removeOldPhoto(event)"
+                        >close</i>
                     </div>
                 {%endfor%}
+                <input type="hidden" name="removed_files"> 
             {%endif%}
         </div>  
     </div>
 </div>
-
-{# <div class="item">
-    <div>Imagem da Receita</div>
-    <div><input type="url" name="image" placeholder="https://" value="{{recipe.image}}"></div>
-</div> #}
 
 <div class="item">
     <div>Nome da receita</div>
