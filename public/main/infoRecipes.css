@@ -75,20 +75,6 @@ header img{
 
 /* === PAGE RECEITA === */
 
-.recipe{
-	margin-bottom: 200px;
-}
-#img {
-	text-align: center;
-	padding: 30px;
-}
-
-#img img{
-	width: 1100px;
-	height: 400px;
-	border-radius: 30px;
-	
-}
 #ingredientes,
 #prepare,
 #information{
@@ -156,7 +142,7 @@ p {
   
   }
 
-  .header-search button {
+.header-search button {
 	width: 110px;
 	margin-right: 30px;
 	height: 30px;
@@ -167,7 +153,7 @@ p {
 	color: white;
 	transition: .7;
 	cursor: pointer;
-  }
+}
 
   ul {
 	  margin: 10px 0 0;
@@ -188,7 +174,30 @@ p {
 	margin: 18px 10px 10px;
 	color: white;
 	border-radius: 3px;
-  }
+	}
+	
+.highlight .gallery-preview {
+	display: flex;
+	margin-left: 70vmax;
+}
+
+
+.content.active {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.recipe-image img {
+	width: 75vw;
+	height: 60vh;
+	
+	margin-left: 12vmax;
+	margin-bottom: 5px;
+	border-radius: 19px;
+}
+
+	
 
 
 
@@ -214,7 +223,19 @@ p {
 	padding: 20px;
 	text-align: center;
 	align-items: center;
-  
   }
-  
+	
+	
+.highlight .gallery-preview img {
+	width: 5vw;
+	height: 10vh;
+	border-radius: 10px;
+	display: flex;
+	opacity: 60%;
+	
+	object-position: 50% 50%;
+	object-fit: none;
+	cursor: pointer;
+	margin: 0 3px;
+}
   
