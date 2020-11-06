@@ -1,84 +1,147 @@
-/*eslint-disable */
-const Chef = require('../models/Chef')
-const {
-    date
-} = require('../../lib/utils')
-
 module.exports = {
-    index(req, res) {
-        Chef.all(function (chefs) {
-            return res.render('admin/chefs/chefs', {
-                chefs
-            })
-        })
-    },
-    show(req, res) {
-        Chef.find(req.params.id, function (chef) {
-            if (!chef) return res.send('Chef not found!')
+  async index(req, res) {
+      try {
+          const results = await Chef.all();
+          const chefs = results.rows;
 
-            Chef.findTotalRecipes(chef.id, function (recipe) {
+          async function getImage(file_id) {
+              let results = await Chef.file(file_id);
+              const file = results.rows[0];
 
-                Chef.findRecipes(chef.id, function (recipes) {
+              return `${req.protocol}://${req.headers.host}${file.path.replace('public', '')}`;
+          }
 
-                    chef.created_at = date(chef.created_at).format
+          const chefsPromise = chefs.map(async chef => {
+              chef.image = await getImage(chef.file_id);
+              return chef;
+          });
 
-                    return res.render('admin/chefs/show', {
-                        chef,
-                        recipe,
-                        recipes
-                    })
-                })
-            })
-        })
-    },
-    edit(req, res) {
-        Chef.find(req.params.id, function (chef) {
-            if (!chef) return res.send('Chef not found!')
-            return res.render('admin/chefs/edit', {
-                chef
-            })
-        })
-    },
-    create(req, res) {
-        return res.render('admin/chefs/create')
-    },
-    post(req, res) {
-        const keys = Object.keys(req.body)
+          const allChefs = await Promise.all(chefsPromise);
 
-        for (let key of keys) {
-            if (req.body[key] == '') {
-                return res.send('Please, fill all the fields!')
-            }
-        }
+          return res.render('admin/chefs/index', { chefs: allChefs });
+      } catch (err) {
+          console.error(err);
+      }
+  },
+  create(req, res) {
+      return res.render('admin/chefs/create');
+  },
+  async post(req, res) {
+      try {
+          const keys = Object.keys(req.body);
 
-        Chef.create(req.body, function (chef) {
-            return res.redirect(`/admin/chefs/${chef.id}`)
-        })
-    },
-    put(req, res) {
-        const keys = Object.keys(req.body)
+          for (let key of keys) {
+              if (req.body[key] == '')
+                  return res.send('Por favor, preencha todos os campos.');
+          };
 
-        for (let key of keys) {
-            if (req.body[key] == '') {
-                return res.send('Please, fill all the fields!')
-            }
-        }
+          if (req.files.length == 0)
+              return res.send('Por favor, envie uma imagem.');
 
-        Chef.update(req.body, function () {
-            return res.redirect(`/admin/chefs/${req.body.id}`)
-        })
-    },
-    delete(req, res) {
-        Chef.totalRecipesByChef(req.body.id, function (chef) {
+          let results = await File.create(req.files[0]);
+          const file_id = results.rows[0].id;
 
-            if (chef.total_recipes > 0) {
-                return res.send('Não é possível deletar chefs com receitas cadastradas!')
-            } else {
-                Chef.delete(req.body.id, function () {
-                    return res.redirect(`/admin/chefs`)
-                })
-            }
+          const data = { ...req.body, file_id };
+          results = await Chef.create(data);
+          const chefId = results.rows[0].id;
 
-        })
-    }
-}
+          return res.redirect(`/admin/chefs/${chefId}`);
+      } catch (err) {
+          console.error(err);
+      }
+  },
+  async show(req, res) {
+      try {
+          let results = await Chef.find(req.params.id);
+          const chef = results.rows[0];
+
+          if (!chef) return res.send('Chef não encontrado!');
+
+          results = await Chef.file(chef.file_id);
+          chef.file = { ...results.rows[0] };
+          chef.file.src = `${req.protocol}://${req.headers.host}${chef.file.path.replace('public', '')}`;
+
+          results = await Chef.chefRecipes(chef.id);
+          const recipes = results.rows;
+
+          async function getImage(recipeId) {
+              let results = await Recipe.files(recipeId);
+              const file = results.rows[0];
+
+              return `${req.protocol}://${req.headers.host}${file.path.replace('public', '')}`;
+          }
+
+          const recipesPromise = recipes.map(async recipe => {
+              recipe.image = await getImage(recipe.id);
+              return recipe;
+          });
+
+          const allChefRecipes = await Promise.all(recipesPromise);
+
+          return res.render('admin/chefs/show', { chef, recipes: allChefRecipes });
+      } catch (err) {
+          console.error(err);
+      }
+  },
+  async edit(req, res) {
+      try {
+          let results = await Chef.find(req.params.id);
+          const chef = results.rows[0];
+
+          if (!chef) return res.send('Chef não encontrado!');
+
+          results = await Chef.file(chef.file_id);
+          const file = { ...results.rows[0] };
+          file.src = `${req.protocol}://${req.headers.host}${file.path.replace('public', '')}`;
+
+          return res.render('admin/chefs/edit', { chef, file });
+      } catch (err) {
+          console.error(err);
+      }
+  },
+  async put(req, res) {
+      try {
+          const keys = Object.keys(req.body);
+
+          for (let key of keys) {
+              if (req.body[key] == '' & key != 'removed_files')
+                  return res.send('Por favor, preencha todos os campos.');
+          };
+
+          if (req.body.removed_files && req.files == 0)
+              return res.send('Por favor, envie uma imagem.');
+
+          let file_id;
+
+          if (req.files.length != 0) {
+              const results = await File.create(req.files[0]);
+              file_id = results.rows[0].id;
+          }
+
+          const data = {
+              ...req.body,
+              file_id: file_id || req.body.file_id
+          };
+          await Chef.update(data);
+
+          if (req.body.removed_files) {
+              const removedFileId = req.body.removed_files.replace(',', '');
+              await File.delete(removedFileId);
+          }
+
+          return res.redirect(`/admin/chefs/${req.body.id}`);
+      } catch (err) {
+          console.error(err);
+      }
+  },
+  async delete(req, res) {
+      try {
+          await Chef.delete(req.body.id);
+          await File.delete(req.body.file_id);
+
+          return res.redirect('/admin/chefs');
+      } catch (err) {
+          console.error(err);
+      }
+  }
+};
