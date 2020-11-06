@@ -17,9 +17,7 @@ header {
   display: flex;
   align-items: center;
   padding: 15px 0;
-
 }
-
 
 header img {
   margin-right: 122.4px;
@@ -91,7 +89,6 @@ header a {
   margin-bottom: 10px;
 }
 
-
 .cards  {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -111,7 +108,6 @@ header a {
 .card_img img:hover {
   opacity: 80%;
 }
-
 
 .info h1 {
   font-size: 18px;
@@ -154,25 +150,26 @@ header a {
 
 .header-search  input {
   width: 200px;
-  height: 30px;
+  height: 35px;
   margin-left: 30px;
   border-radius: 5px;
   background-color: rgb(235, 230, 230);
   margin-right: 0;
+  border: 4px solid  rgb(235, 230, 230);
 
-  box-sizing: border-box;
 }
 
 .header-search button {
   width: 110px;
-
-  height: 30px;
-  margin-left: 30px;
+  
+  height: 35px;
+  margin-left: 5px;
   border-radius: 5px;
-  background-color: #d372ae;
-  font-size: 12px;;
+  background-color: #9472d3;
+  font-size: 13px;;
   color: white;
   transition: .7;
+
   cursor: pointer;
 }
 
