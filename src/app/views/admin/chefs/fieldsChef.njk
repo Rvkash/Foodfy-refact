@@ -1,14 +1,34 @@
 <div class="item">
-    <div>Avatar do Chef</div>
+    <div>Fotos</div>
     <div>
-    <input 
-    type="text" 
-    name="avatar_url" 
-    placeholder="https://" 
-    value="{{chef.avatar_url}}">
+        <div id="photos-upload">
+            <input 
+               id="photos-input" 
+               type="file" 
+               name="photos"
+               multiple
+               accept="image/*"
+               onchange="PhotosUpload.handleFileInput(event, 5)"
+            >
+              <p>Selecione até 5 fotos</p>
+        </div>
+
+        <div id="photos-preview">
+            {%if files %}
+                {%for image in files%}
+                    <div class="photo" id="{{image.file_id}}">
+                        <img src="{{image.src}}" alt="{{image.name}}">
+                        <i 
+                        class="material-icons"
+                        onclick="PhotosUpload.removeOldPhoto(event)"
+                        >close</i>
+                    </div>
+                {%endfor%}
+                <input type="hidden" name="removed_files"> 
+            {%endif%}
+        </div>  
     </div>
 </div>
-
 
 <div class="item">
     <div>Nome do Chef</div>
@@ -20,3 +40,5 @@
     value="{{chefs.name}}">
     </div>
 </div>
+
+   <script src="/scripts/photos-upload.js"></script>
