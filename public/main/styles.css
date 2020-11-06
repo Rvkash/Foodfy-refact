@@ -142,27 +142,27 @@ header a {
 }
 
 .search {
-  width: 100%;
-  box-sizing: border-box;
   display: flex;
   border-radius: 5px;
 }
 
-.header-search  input {
+
+.header-search input {
   width: 200px;
   height: 35px;
   margin-left: 30px;
   border-radius: 5px;
   background-color: rgb(235, 230, 230);
-  margin-right: 0;
   border: 4px solid  rgb(235, 230, 230);
+  align-items: center;
+  justify-content: center;
 
 }
 
 .header-search button {
   width: 110px;
-  
-  height: 35px;
+  align-items: center;
+  height: 35px; 
   margin-left: 5px;
   border-radius: 5px;
   background-color: #9472d3;
