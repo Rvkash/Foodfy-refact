@@ -50,10 +50,10 @@ $$ LANGUAGE plpgsql;
 CREATE TRIGGER set_timestamp
 BEFORE UPDATE ON recipes
 FOR EACH ROW
-EXECUTE PROCEDURE trigger_set_timestamp();
+EXECUTE PROCEDURE trigger_set_timestamp()
 
 -- auto updated_at chefs
 CREATE TRIGGER set_timestamp
 BEFORE UPDATE ON chefs
 FOR EACH ROW
-EXECUTE PROCEDURE trigger_set_timestamp();
+EXECUTE PROCEDURE trigger_set_timestamp()
