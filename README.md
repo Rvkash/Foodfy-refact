@@ -45,7 +45,7 @@ npm start
 Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
 
 
-## :email: Faq
+## :robot: Tecnologias
 - HTML
 - CSS
 - Javascript
