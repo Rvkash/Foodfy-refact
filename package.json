@@ -22,12 +22,12 @@
     "nunjucks": "^3.2.1",
     "override": "0.0.1",
     "pg": "^8.3.3",
-    "object-path": ">=0.11.5"
+    "object-path": ">=0.11.6"
   },
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
-    "object-path": ">=0.11.5"
+    "object-path": ">=0.11.6"
   }
 }
